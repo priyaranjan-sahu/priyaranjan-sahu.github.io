@@ -1,0 +1,331 @@
+/* Custom styles for Priya Ranjan Sahu portfolio */
+@import "minima";
+
+:root {
+  --primary-color: #0e75b6;
+  --primary-hover: #0b5d91;
+  --aws-color: #ff9900;
+  --azure-color: #0089d6;
+  --gcp-color: #4285f4;
+  --success-color: #28a745;
+  --dark-bg: #0d1117;
+  --card-bg: #161b22;
+  --border-color: #30363d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+}
+
+/* Base overrides for dark theme */
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+}
+
+.site-header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.site-title {
+  color: var(--primary-color) !important;
+}
+
+.site-nav .page-link {
+  color: var(--text-secondary) !important;
+}
+
+.site-nav .page-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(135deg, rgba(14, 117, 182, 0.1) 0%, rgba(14, 117, 182, 0.05) 100%);
+  border-bottom: 1px solid var(--border-color);
+  margin: -1.5rem -1.5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.motto {
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.social-link.github {
+  background: #24292e;
+  color: #fff;
+  border: 1px solid var(--border-color);
+}
+
+.social-link.github:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.social-link.linkedin {
+  background: #0077b5;
+  color: #fff;
+}
+
+.social-link.linkedin:hover {
+  background: #006097;
+}
+
+.social-link.blog {
+  background: #ff5722;
+  color: #fff;
+}
+
+.social-link.blog:hover {
+  background: #e64a19;
+}
+
+.social-link.email {
+  background: #ea4335;
+  color: #fff;
+}
+
+.social-link.email:hover {
+  background: #d93025;
+}
+
+.social-link.sponsor {
+  background: #ea4aaa;
+  color: #fff;
+}
+
+.social-link.sponsor:hover {
+  background: #d03aa0;
+}
+
+/* Badges row */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+/* Pillars grid */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.pillar {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+}
+
+.pillar h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.pillar p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.project-card h3 a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-card h3 a:hover {
+  color: var(--primary-color);
+}
+
+.project-card p {
+  margin: 0 0 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.project-card .tech {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background: var(--card-bg);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+td {
+  color: var(--text-secondary);
+}
+
+td a {
+  color: var(--primary-color);
+}
+
+tr:hover td {
+  background: rgba(14, 117, 182, 0.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
+
+/* Code blocks */
+pre, code {
+  background: #1f2428 !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+/* Horizontal rule */
+hr {
+  border-color: var(--border-color);
+}
+
+/* Blockquote */
+blockquote {
+  border-left-color: var(--primary-color);
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .pillars, .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

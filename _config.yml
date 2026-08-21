@@ -1,0 +1,42 @@
+title: "Priya Ranjan Sahu"
+description: "Multi-Cloud DevOps & Security Engineer — AWS, Azure, GCP, Kubernetes, FinOps"
+url: "https://priyaranjan-sahu.github.io"
+baseurl: ""
+author: "Priya Ranjan Sahu"
+email: "onlysworld@gmail.com"
+linkedin: "https://www.linkedin.com/in/priyaranjan-sahu/"
+github: "https://github.com/priyaranjan-sahu"
+blog: "https://linwintech.blogspot.com/"
+
+theme: minima
+remote_theme: jekyll/minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+minima:
+  skin: dark
+  social_links:
+    - title: GitHub
+      url: https://github.com/priyaranjan-sahu
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/priyaranjan-sahu/
+    - title: Blog
+      url: https://linwintech.blogspot.com/
+
+header_pages:
+  - index.md
+  - projects.md
+  - about.md
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Custom CSS
+sass:
+  style: compressed
