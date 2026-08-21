@@ -9,12 +9,6 @@ github: "https://github.com/priyaranjan-sahu"
 blog: "https://linwintech.blogspot.com/"
 
 theme: minima
-remote_theme: jekyll/minima
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
 
 minima:
   skin: dark
@@ -37,6 +31,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# Custom CSS
-sass:
-  style: compressed
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
