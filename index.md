@@ -189,30 +189,69 @@ title: Home
         <div class="card-content">
           <span class="card-category">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-            Cloud Infrastructure
+            FinOps & Cost Optimization
           </span>
-          <h3 class="card-title">GCP Landing Zone</h3>
-          <p class="card-description">Production-ready GCP landing zone with organizational policies, IAM, networking, and security controls for enterprise workloads.</p>
+          <h3 class="card-title">multi-cloud-finops</h3>
+          <p class="card-description">Multi-cloud cost optimization and anomaly detection (FOCUS 1.0) for AWS, GCP & Azure — spend aggregation, forecasting, rightsizing, Prometheus/Grafana monitoring, and KEDA autoscaling.</p>
           <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
             <span class="tech-tag">Terraform</span>
-            <span class="tech-tag">GCP</span>
-            <span class="tech-tag">Cloud Build</span>
-            <span class="tech-tag">Organization Policy</span>
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">Prometheus</span>
+            <span class="tech-tag">Grafana</span>
           </div>
         </div>
         <div class="card-footer">
-          <a href="https://github.com/priyaranjan-sahu" class="card-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/priyaranjan-sahu/multi-cloud-finops" class="card-link" target="_blank" rel="noopener noreferrer">
             View on GitHub
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <div class="card-meta">
             <span class="meta-item">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              42
+              1
             </span>
             <span class="meta-item">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-              15
+              0
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="security">
+        <div class="card-header">
+          <div class="card-tier tier-professional">Professional</div>
+        </div>
+        <div class="card-content">
+          <span class="card-category">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Security & Compliance
+          </span>
+          <h3 class="card-title">multi-cloud-automation-scripts</h3>
+          <p class="card-description">Read-only storage security audit scripts for Azure, AWS, and GCP — public access, encryption, and hardening checks with CI testing.</p>
+          <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Bash</span>
+            <span class="tech-tag">PowerShell</span>
+            <span class="tech-tag">KQL</span>
+            <span class="tech-tag">GitHub Actions</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://github.com/priyaranjan-sahu/multi-cloud-automation-scripts" class="card-link" target="_blank" rel="noopener noreferrer">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <div class="card-meta">
+            <span class="meta-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              1
+            </span>
+            <span class="meta-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              0
             </span>
           </div>
         </div>
@@ -225,66 +264,32 @@ title: Home
         <div class="card-content">
           <span class="card-category">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            CI/CD Pipeline
+            DevOps Portfolio
           </span>
-          <h3 class="card-title">GitHub Actions Starter Kit</h3>
-          <p class="card-description">Production-ready GitHub Actions workflows for multi-cloud deployments with security scanning, testing, and automated rollbacks.</p>
+          <h3 class="card-title">multi-cloud-devops-portfolio</h3>
+          <p class="card-description">Real-world DevOps & Security portfolio — Terraform, Ansible, ArgoCD GitOps, OPA policies & CI/CD across AWS, Azure and GCP.</p>
           <div class="card-tech">
-            <span class="tech-tag">GitHub Actions</span>
             <span class="tech-tag">Terraform</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Trivy</span>
+            <span class="tech-tag">Ansible</span>
+            <span class="tech-tag">ArgoCD</span>
+            <span class="tech-tag">Helm</span>
+            <span class="tech-tag">OPA</span>
+            <span class="tech-tag">Jenkins</span>
           </div>
         </div>
         <div class="card-footer">
-          <a href="https://github.com/priyaranjan-sahu" class="card-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/priyaranjan-sahu/multi-cloud-devops-portfolio" class="card-link" target="_blank" rel="noopener noreferrer">
             View on GitHub
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <div class="card-meta">
             <span class="meta-item">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              38
+              0
             </span>
             <span class="meta-item">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-              12
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-category="monitoring">
-        <div class="card-header">
-          <div class="card-tier tier-professional">Professional</div>
-        </div>
-        <div class="card-content">
-          <span class="card-category">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            Monitoring Stack
-          </span>
-          <h3 class="card-title">Kubernetes Observability</h3>
-          <p class="card-description">Complete observability stack for Kubernetes with Prometheus, Grafana, Loki, and custom alerting rules for production workloads.</p>
-          <div class="card-tech">
-            <span class="tech-tag">Kubernetes</span>
-            <span class="tech-tag">Prometheus</span>
-            <span class="tech-tag">Grafana</span>
-            <span class="tech-tag">Loki</span>
-          </div>
-        </div>
-        <div class="card-footer">
-          <a href="https://github.com/priyaranjan-sahu" class="card-link" target="_blank" rel="noopener noreferrer">
-            View on GitHub
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <div class="card-meta">
-            <span class="meta-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              56
-            </span>
-            <span class="meta-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-              21
+              0
             </span>
           </div>
         </div>
