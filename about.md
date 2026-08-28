@@ -379,6 +379,80 @@ title: About
   </div>
 </section>
 
+<!-- Leadership -->
+<section class="section" id="leadership">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Leadership & Impact</h2>
+    <div class="skills-grid">
+
+      <div class="skill-category reveal">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="skill-title">SRE Transformation</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">SLO/SLI Frameworks</span>
+          <span class="skill-tag">MTTR Reduction 60%</span>
+          <span class="skill-tag">Incident Response</span>
+          <span class="skill-tag">Runbook Automation</span>
+          <span class="skill-tag">Post-mortem Culture</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-1">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 class="skill-title">Team Building</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">High-Performing Teams</span>
+          <span class="skill-tag">Mentorship Programs</span>
+          <span class="skill-tag">Automation Culture</span>
+          <span class="skill-tag">Knowledge Sharing</span>
+          <span class="skill-tag">Cross-functional Collaboration</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-2">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="skill-title">Process Optimization</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">ITIL Alignment</span>
+          <span class="skill-tag">Change Management</span>
+          <span class="skill-tag">Deployment Automation</span>
+          <span class="skill-tag">CI/CD Pipeline Design</span>
+          <span class="skill-tag">Release Management</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-3">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="skill-title">Cost Optimization</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">FinOps Strategy</span>
+          <span class="skill-tag">30% Cost Reduction</span>
+          <span class="skill-tag">Budget Forecasting</span>
+          <span class="skill-tag">Resource Rightsizing</span>
+          <span class="skill-tag">Spend Analytics</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Certifications -->
 <section class="section" id="certifications">
   <div class="container">

@@ -34,7 +34,7 @@ title: Home
       <span class="hero-meta-divider">·</span>
       <span class="hero-meta-item">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        Senior SRE / DevOps Lead
+        Multi-Cloud Architect
       </span>
     </div>
 
@@ -322,6 +322,22 @@ title: Home
           <span class="tech-item"><span class="tech-dot dot-advanced"></span>OCI</span>
           <span class="tech-item"><span class="tech-dot dot-advanced"></span>Alibaba Cloud</span>
           <span class="tech-item"><span class="tech-dot dot-advanced"></span>Tencent Cloud</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Ingram Micro</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cloudblue</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">On-Premises & Datacenter</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>RHEL / CentOS</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Ubuntu / Debian</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Windows Server</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>VMware ESXi</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Hyper-V</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>cPanel / WHM</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Bare Metal</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Load Balancers</span>
         </div>
       </div>
 
@@ -414,6 +430,18 @@ title: Home
           <span class="tech-item"><span class="tech-dot dot-advanced"></span>DynamoDB</span>
           <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cosmos DB</span>
           <span class="tech-item"><span class="tech-dot dot-advanced"></span>Oracle DB</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Email, DNS & Web Servers</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Exim / Postfix</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Apache / Nginx</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Exchange / Office 365</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>BIND / PowerDNS</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>IIS / Tomcat</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>cPanel / Plesk</span>
         </div>
       </div>
 
