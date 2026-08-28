@@ -69,7 +69,6 @@ exclude:
   - .gitignore
   - README.md
   - LICENSE
-  - "*.md"
   - "*.sh"
   - "*.bat"
 
