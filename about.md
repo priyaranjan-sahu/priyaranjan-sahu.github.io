@@ -130,6 +130,29 @@ title: About
           <div class="skill-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
           </div>
+          <h3 class="skill-title">On-Premises & Datacenter</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">RHEL</span>
+          <span class="skill-tag">CentOS</span>
+          <span class="skill-tag">Ubuntu</span>
+          <span class="skill-tag">Debian</span>
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">VMware ESXi</span>
+          <span class="skill-tag">Hyper-V</span>
+          <span class="skill-tag">cPanel/WHM</span>
+          <span class="skill-tag">Plesk</span>
+          <span class="skill-tag">Bare Metal</span>
+          <span class="skill-tag">Load Balancers</span>
+          <span class="skill-tag">NFS Storage</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-2">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
           <h3 class="skill-title">Infrastructure as Code</h3>
         </div>
         <div class="skill-tags">
@@ -258,6 +281,29 @@ title: About
         </div>
       </div>
 
+      <div class="skill-category reveal delay-1">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3 class="skill-title">Email, DNS & Web Servers</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Exim</span>
+          <span class="skill-tag">Postfix</span>
+          <span class="skill-tag">Dovecot</span>
+          <span class="skill-tag">Microsoft Exchange</span>
+          <span class="skill-tag">Office 365</span>
+          <span class="skill-tag">BIND</span>
+          <span class="skill-tag">PowerDNS</span>
+          <span class="skill-tag">CoreDNS</span>
+          <span class="skill-tag">Apache</span>
+          <span class="skill-tag">Nginx</span>
+          <span class="skill-tag">IIS</span>
+          <span class="skill-tag">Tomcat</span>
+        </div>
+      </div>
+
       <div class="skill-category reveal delay-8">
         <div class="skill-header">
           <div class="skill-icon">
@@ -358,12 +404,6 @@ title: About
       </div>
 
       <div class="cert-badge reveal delay-3">
-        <div class="cert-badge-icon" style="background: linear-gradient(135deg, #FF9900, #FF6600);">AWS</div>
-        <h3 class="cert-badge-title">Solutions Architect Associate</h3>
-        <p class="cert-badge-subtitle">Amazon Web Services</p>
-      </div>
-
-      <div class="cert-badge reveal delay-4">
         <div class="cert-badge-icon" style="background: linear-gradient(135deg, #E0234E, #B01E3E);">R</div>
         <h3 class="cert-badge-title">RHCSA</h3>
         <p class="cert-badge-subtitle">Red Hat Certified System Administrator</p>
@@ -385,6 +425,12 @@ title: About
         <div class="cert-badge-icon" style="background: linear-gradient(135deg, #2A71D0, #1A5CB0);">I</div>
         <h3 class="cert-badge-title">ITIL</h3>
         <p class="cert-badge-subtitle">ITIL Foundation</p>
+      </div>
+
+      <div class="cert-badge reveal delay-8">
+        <div class="cert-badge-icon" style="background: linear-gradient(135deg, #333333, #1A1A1A);">M</div>
+        <h3 class="cert-badge-title">MBA</h3>
+        <p class="cert-badge-subtitle">Operations & Finance</p>
       </div>
 
     </div>
