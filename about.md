@@ -29,16 +29,34 @@ title: About
         <div class="stat-label">Years Experience</div>
       </div>
       <div class="stat-item reveal delay-1">
-        <div class="stat-value">3×</div>
-        <div class="stat-label">GCP Certifications</div>
+        <div class="stat-value">2000+</div>
+        <div class="stat-label">GCP Projects</div>
       </div>
       <div class="stat-item reveal delay-2">
-        <div class="stat-value">100+</div>
-        <div class="stat-label">Projects Delivered</div>
+        <div class="stat-value">2000+</div>
+        <div class="stat-label">GKE Clusters</div>
       </div>
       <div class="stat-item reveal delay-3">
-        <div class="stat-value">50+</div>
-        <div class="stat-label">AWS Accounts Managed</div>
+        <div class="stat-value">600+</div>
+        <div class="stat-label">Terraform IaC</div>
+      </div>
+    </div>
+    <div class="about-stats" style="margin-top: var(--space-4);">
+      <div class="stat-item reveal">
+        <div class="stat-value">100+</div>
+        <div class="stat-label">Azure Resources</div>
+      </div>
+      <div class="stat-item reveal delay-1">
+        <div class="stat-value">10+</div>
+        <div class="stat-label">OCI Compartments</div>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <div class="stat-value">500+</div>
+        <div class="stat-label">Linux Servers</div>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <div class="stat-value">100+</div>
+        <div class="stat-label">Windows Servers</div>
       </div>
     </div>
   </div>

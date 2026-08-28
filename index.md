@@ -105,19 +105,71 @@ title: Home
         <div class="stat-description">Across SRE, DevOps, and Cloud Architecture</div>
       </div>
       <div class="stat-card reveal delay-1">
-        <div class="stat-value">3×</div>
-        <div class="stat-label">GCP Certifications</div>
-        <div class="stat-description">Professional level certifications</div>
+        <div class="stat-value">2000+</div>
+        <div class="stat-label">GCP Projects</div>
+        <div class="stat-description">Managed across enterprise environments</div>
       </div>
       <div class="stat-card reveal delay-2">
-        <div class="stat-value">100+</div>
-        <div class="stat-label">Projects Delivered</div>
-        <div class="stat-description">Infrastructure automation & cloud migrations</div>
+        <div class="stat-value">2000+</div>
+        <div class="stat-label">GKE Clusters</div>
+        <div class="stat-description">Kubernetes orchestration at scale</div>
       </div>
       <div class="stat-card reveal delay-3">
-        <div class="stat-value">50+</div>
-        <div class="stat-label">AWS Accounts</div>
-        <div class="stat-description">Managed across enterprise environments</div>
+        <div class="stat-value">600+</div>
+        <div class="stat-label">Terraform IaC</div>
+        <div class="stat-description">Infrastructure as Code deployments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cloud Coverage Section -->
+<section class="section" id="cloud-coverage">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Cloud Coverage</h2>
+    <p class="section-subtitle text-center reveal delay-1">Multi-cloud infrastructure managed across global environments</p>
+    <div class="stats-grid reveal delay-2">
+      <div class="stat-card">
+        <div class="stat-value">2000+</div>
+        <div class="stat-label">GCP Projects</div>
+        <div class="stat-description">Compute Engine, GKE, Cloud Functions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">100+</div>
+        <div class="stat-label">Azure Resources</div>
+        <div class="stat-description">VMs, AKS, Blob Storage, Cosmos DB</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">10+</div>
+        <div class="stat-label">OCI Compartments</div>
+        <div class="stat-description">Oracle Cloud Infrastructure</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">500+</div>
+        <div class="stat-label">Linux Servers</div>
+        <div class="stat-description">RHEL, CentOS, Ubuntu, Debian</div>
+      </div>
+    </div>
+    <div class="stats-grid reveal delay-3" style="margin-top: var(--space-4);">
+      <div class="stat-card">
+        <div class="stat-value">100+</div>
+        <div class="stat-label">Windows Servers</div>
+        <div class="stat-description">Windows Server, Active Directory</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">600+</div>
+        <div class="stat-label">Terraform IaC</div>
+        <div class="stat-description">Multi-cloud infrastructure modules</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">2000+</div>
+        <div class="stat-label">GKE Clusters</div>
+        <div class="stat-description">Kubernetes orchestration at scale</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">10M+</div>
+        <div class="stat-label">Monthly Users</div>
+        <div class="stat-description">Infrastructure serving at scale</div>
       </div>
     </div>
   </div>
