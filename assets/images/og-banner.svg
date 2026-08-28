@@ -1,26 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D1117"/>
-      <stop offset="100%" style="stop-color:#161B22"/>
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#58A6FF"/>
-      <stop offset="50%" style="stop-color:#A371F7"/>
-      <stop offset="100%" style="stop-color:#58A6FF"/>
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="50%" style="stop-color:#a371f7"/>
+      <stop offset="100%" style="stop-color:#3fb950"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#58A6FF;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#A371F7;stop-opacity:0.15"/>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0f6fc"/>
+      <stop offset="100%" style="stop-color:#8b949e"/>
     </linearGradient>
   </defs>
+
+  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="100" cy="100" r="300" fill="url(#glow)" opacity="0.5"/>
-  <circle cx="1100" cy="530" r="250" fill="url(#glow)" opacity="0.4"/>
+
+  <!-- Grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Glow orbs -->
+  <circle cx="200" cy="150" r="300" fill="#58a6ff" opacity="0.05"/>
+  <circle cx="1000" cy="500" r="250" fill="#a371f7" opacity="0.05"/>
+
+  <!-- Top accent line -->
   <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
-  <text x="600" y="220" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="72" font-weight="800" fill="#E6EDF3" text-anchor="middle" letter-spacing="-2">Priya Ranjan Sahu</text>
-  <text x="600" y="300" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="32" font-weight="500" fill="url(#accent)" text-anchor="middle" letter-spacing="2">Senior SRE / DevOps Lead / Cloud Architect</text>
-  <text x="600" y="370" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="22" font-weight="400" fill="#8B949E" text-anchor="middle">16+ Years Experience · 3× GCP Professional Certs</text>
-  <text x="600" y="450" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="500" fill="#58A6FF" text-anchor="middle" letter-spacing="3">GCP · AWS · KUBERNETES · TERRAFORM · CI/CD</text>
+
+  <!-- Logo icon -->
+  <g transform="translate(80, 60)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="none" stroke="#58a6ff" stroke-width="2"/>
+    <path d="M16 20h24M16 28h18M16 36h12" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Name -->
+  <text x="150" y="95" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#f0f6fc">Priyaranjan Sahu</text>
+
+  <!-- Title -->
+  <text x="150" y="130" font-family="Arial, sans-serif" font-size="20" fill="#58a6ff">Multi-Cloud Architect | DevOps | SRE</text>
+
+  <!-- Divider -->
+  <rect x="80" y="165" width="1040" height="1" fill="#30363d"/>
+
+  <!-- Main headline -->
+  <text x="80" y="240" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#f0f6fc">Building Production-Grade</text>
+  <text x="80" y="300" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#f0f6fc">Multi-Cloud Infrastructure</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="350" font-family="Arial, sans-serif" font-size="22" fill="#8b949e">16+ years | GCP, AWS, Azure, OCI, Alibaba, Tencent</text>
+
+  <!-- Cloud badges -->
+  <g transform="translate(80, 390)">
+    <!-- GCP -->
+    <rect x="0" y="0" width="120" height="36" rx="18" fill="rgba(66,133,244,0.15)" stroke="#4285f4" stroke-width="1"/>
+    <text x="60" y="23" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4285f4" text-anchor="middle">GCP</text>
+
+    <!-- AWS -->
+    <rect x="135" y="0" width="120" height="36" rx="18" fill="rgba(255,153,0,0.15)" stroke="#ff9900" stroke-width="1"/>
+    <text x="195" y="23" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ff9900" text-anchor="middle">AWS</text>
+
+    <!-- Azure -->
+    <rect x="270" y="0" width="120" height="36" rx="18" fill="rgba(0,137,214,0.15)" stroke="#0089d6" stroke-width="1"/>
+    <text x="330" y="23" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0089d6" text-anchor="middle">Azure</text>
+
+    <!-- Terraform -->
+    <rect x="405" y="0" width="120" height="36" rx="18" fill="rgba(98,60,228,0.15)" stroke="#623ce4" stroke-width="1"/>
+    <text x="465" y="23" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#623ce4" text-anchor="middle">Terraform</text>
+
+    <!-- Kubernetes -->
+    <rect x="540" y="0" width="120" height="36" rx="18" fill="rgba(50,108,229,0.15)" stroke="#326ce5" stroke-width="1"/>
+    <text x="600" y="23" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#326ce5" text-anchor="middle">Kubernetes</text>
+  </g>
+
+  <!-- Stats -->
+  <g transform="translate(80, 470)">
+    <g>
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#f0f6fc">2000+</text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">GCP Projects</text>
+    </g>
+    <g transform="translate(200, 0)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#f0f6fc">2000+</text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">GKE Clusters</text>
+    </g>
+    <g transform="translate(400, 0)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#f0f6fc">600+</text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">Terraform IaC</text>
+    </g>
+    <g transform="translate(580, 0)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#f0f6fc">3×</text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">GCP Certified</text>
+    </g>
+  </g>
+
+  <!-- Certifications -->
+  <g transform="translate(80, 540)">
+    <rect x="0" y="0" width="140" height="28" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="70" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4285f4" text-anchor="middle">GCP Cloud Architect</text>
+
+    <rect x="155" y="0" width="140" height="28" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="225" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E0234E" text-anchor="middle">RHCSA | RHCE</text>
+
+    <rect x="310" y="0" width="100" height="28" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="360" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1BA0D7" text-anchor="middle">CCNA</text>
+
+    <rect x="425" y="0" width="100" height="28" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="475" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2A71D0" text-anchor="middle">ITIL</text>
+  </g>
+
+  <!-- URL -->
+  <text x="1120" y="600" font-family="Arial, sans-serif" font-size="16" fill="#58a6ff" text-anchor="end">priyaranjan-sahu.github.io</text>
+
+  <!-- Bottom accent line -->
   <rect x="0" y="626" width="1200" height="4" fill="url(#accent)"/>
 </svg>
