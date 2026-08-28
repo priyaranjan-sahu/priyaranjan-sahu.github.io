@@ -175,7 +175,6 @@
         border-radius: var(--radius-full);
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-semibold);
-        color: var(--color-text-inverse);
         box-shadow: var(--shadow-sm);
         transition: transform var(--transition-fast), box-shadow var(--transition-fast);
         &:hover {
@@ -184,11 +183,11 @@
         }
         svg { width: 16px; height: 16px; }
       }
-      .cloud-badge--aws { background: var(--color-aws); }
-      .cloud-badge--azure { background: var(--color-azure); }
-      .cloud-badge--gcp { background: var(--color-gcp); }
-      .cloud-badge--k8s { background: var(--color-k8s); }
-      .cloud-badge--terraform { background: var(--color-terraform); }
+      .cloud-badge--aws { background: rgba(255, 153, 0, 0.15); color: #ff9900; border: 1px solid rgba(255, 153, 0, 0.3); }
+      .cloud-badge--azure { background: rgba(0, 137, 214, 0.15); color: #0089d6; border: 1px solid rgba(0, 137, 214, 0.3); }
+      .cloud-badge--gcp { background: rgba(66, 133, 244, 0.15); color: #4285f4; border: 1px solid rgba(66, 133, 244, 0.3); }
+      .cloud-badge--k8s { background: rgba(50, 108, 229, 0.15); color: #326ce5; border: 1px solid rgba(50, 108, 229, 0.3); }
+      .cloud-badge--terraform { background: rgba(98, 60, 228, 0.15); color: #623ce4; border: 1px solid rgba(98, 60, 228, 0.3); }
     }
   }
 

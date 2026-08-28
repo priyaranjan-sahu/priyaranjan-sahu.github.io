@@ -47,15 +47,15 @@ title: Home
     </div>
 
     <div class="hero-cloud-badges reveal delay-5">
-      <span class="cloud-badge gcp-badge">
+      <span class="cloud-badge cloud-badge--gcp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
         Google Cloud
       </span>
-      <span class="cloud-badge aws-badge">
+      <span class="cloud-badge cloud-badge--aws">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
         AWS
       </span>
-      <span class="cloud-badge terraform-badge">
+      <span class="cloud-badge cloud-badge--terraform">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
         Terraform
       </span>
