@@ -665,7 +665,7 @@ title: Home
     <h2 class="section-title text-center reveal">Let's Work Together</h2>
     <p class="section-subtitle text-center reveal delay-1">Have a project in mind or just want to connect? I'd love to hear from you.</p>
     <div class="contact-links reveal delay-2">
-      <a href="mailto:onlysworld@gmail.com" class="btn btn-primary btn-lg">
+      <a href="https://github.com/priyaranjan-sahu" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Send Me an Email
       </a>
