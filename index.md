@@ -145,14 +145,14 @@ title: Home
         <div class="stat-description">Oracle Cloud Infrastructure</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">500+</div>
+        <div class="stat-value">2000+</div>
         <div class="stat-label">Linux Servers</div>
         <div class="stat-description">RHEL, CentOS, Ubuntu, Debian</div>
       </div>
     </div>
     <div class="stats-grid reveal delay-3" style="margin-top: var(--space-4);">
       <div class="stat-card">
-        <div class="stat-value">100+</div>
+        <div class="stat-value">1000+</div>
         <div class="stat-label">Windows Servers</div>
         <div class="stat-description">Windows Server, Active Directory</div>
       </div>
@@ -171,6 +171,62 @@ title: Home
         <div class="stat-label">Monthly Users</div>
         <div class="stat-description">Infrastructure serving at scale</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance & Frameworks Section -->
+<section class="section" id="compliance">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Compliance & Frameworks</h2>
+    <p class="section-subtitle text-center reveal delay-1">Enterprise governance, security standards, and operational excellence</p>
+    <div class="tech-grid reveal delay-2">
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Security & Compliance</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>PCI-DSS</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>ISO 27001</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>HIPAA</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>GDPR</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>SOC 2</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>NIST Framework</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Cloud Well-Architected</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>AWS Well-Architected</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>GCP Architecture Framework</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Azure Well-Architected</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>CIS Benchmarks</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>STIG Compliance</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">ITSM & Operations</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>ITIL v4</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Agile/Scrum</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>DevSecOps</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>SRE Principles</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>FinOps Framework</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Cloud Security</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Zero Trust Architecture</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Cloud Security Alliance</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>SASE/SSE</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>CSPM/CWPP</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>OPA/Rego Policies</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

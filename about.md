@@ -51,11 +51,11 @@ title: About
         <div class="stat-label">OCI Compartments</div>
       </div>
       <div class="stat-item reveal delay-2">
-        <div class="stat-value">500+</div>
+        <div class="stat-value">2000+</div>
         <div class="stat-label">Linux Servers</div>
       </div>
       <div class="stat-item reveal delay-3">
-        <div class="stat-value">100+</div>
+        <div class="stat-value">1000+</div>
         <div class="stat-label">Windows Servers</div>
       </div>
     </div>
@@ -390,6 +390,81 @@ title: About
           <span class="skill-tag">DataOps</span>
           <span class="skill-tag">BigQuery</span>
           <span class="skill-tag">Redshift</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Compliance & Frameworks -->
+<section class="section" id="compliance">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Compliance & Frameworks</h2>
+    <div class="skills-grid">
+
+      <div class="skill-category reveal">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="skill-title">Security & Compliance</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">PCI-DSS</span>
+          <span class="skill-tag">ISO 27001</span>
+          <span class="skill-tag">HIPAA</span>
+          <span class="skill-tag">GDPR</span>
+          <span class="skill-tag">SOC 2</span>
+          <span class="skill-tag">NIST Framework</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-1">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          </div>
+          <h3 class="skill-title">Cloud Well-Architected</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS Well-Architected</span>
+          <span class="skill-tag">GCP Architecture Framework</span>
+          <span class="skill-tag">Azure Well-Architected</span>
+          <span class="skill-tag">CIS Benchmarks</span>
+          <span class="skill-tag">STIG Compliance</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-2">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3 class="skill-title">ITSM & Operations</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">ITIL v4</span>
+          <span class="skill-tag">Agile/Scrum</span>
+          <span class="skill-tag">DevSecOps</span>
+          <span class="skill-tag">SRE Principles</span>
+          <span class="skill-tag">FinOps Framework</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-3">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="skill-title">Cloud Security</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Zero Trust Architecture</span>
+          <span class="skill-tag">Cloud Security Alliance</span>
+          <span class="skill-tag">SASE/SSE</span>
+          <span class="skill-tag">CSPM/CWPP</span>
+          <span class="skill-tag">OPA/Rego Policies</span>
         </div>
       </div>
 
