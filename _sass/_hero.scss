@@ -164,17 +164,21 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       gap: var(--space-3);
       margin-top: var(--space-8);
       animation: fade-in-up 0.8s ease-out 0.7s both;
       .cloud-badge {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: var(--space-2);
         padding: var(--space-2) var(--space-4);
+        min-width: 120px;
         border-radius: var(--radius-full);
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-semibold);
+        text-align: center;
         box-shadow: var(--shadow-sm);
         transition: transform var(--transition-fast), box-shadow var(--transition-fast);
         &:hover {
@@ -185,6 +189,7 @@
           width: 16px;
           height: 16px;
           stroke: currentColor;
+          flex-shrink: 0;
         }
       }
       .cloud-badge--aws { background: rgba(255, 153, 0, 0.15); color: #ff9900; border: 1px solid rgba(255, 153, 0, 0.3); }
@@ -194,6 +199,18 @@
       .cloud-badge--terraform { background: rgba(98, 60, 228, 0.15); color: #623ce4; border: 1px solid rgba(98, 60, 228, 0.3); }
       .cloud-badge--docker { background: rgba(36, 150, 237, 0.15); color: #2496ed; border: 1px solid rgba(36, 150, 237, 0.3); }
       .cloud-badge--linux { background: rgba(255, 204, 0, 0.15); color: #fcc624; border: 1px solid rgba(255, 204, 0, 0.3); }
+      @media (max-width: 640px) {
+        gap: var(--space-2);
+        .cloud-badge {
+          min-width: 100px;
+          padding: var(--space-1) var(--space-3);
+          font-size: var(--font-size-xs);
+          svg {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
     }
   }
 
