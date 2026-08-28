@@ -1,0 +1,122 @@
+// ============================================================================
+// BUTTONS
+// ============================================================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  text-decoration: none;
+  @include focus-ring;
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  svg { flex-shrink: 0; }
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+  &:hover:not(:disabled) {
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.btn-secondary {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  &:hover:not(:disabled) {
+    background: var(--color-bg-tertiary);
+    border-color: var(--color-border-focus);
+  }
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+  &:hover:not(:disabled) {
+    color: var(--color-text-primary);
+    background: var(--color-bg-tertiary);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-accent-primary);
+  border: 1px solid var(--color-accent-primary);
+  &:hover:not(:disabled) {
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--color-accent-primary);
+  }
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  gap: var(--space-1.5);
+}
+
+.btn-md {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-base);
+  gap: var(--space-2);
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-lg);
+  gap: var(--space-3);
+}
+
+.btn-icon {
+  padding: var(--space-2);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-group {
+  display: inline-flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  .btn { flex: 1; min-width: 140px; }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    .btn { width: 100%; }
+  }
+}
+
+// Button with icon
+.btn-icon-left { flex-direction: row; }
+.btn-icon-right { flex-direction: row-reverse; }
+
+// Pulse animation for CTAs
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: var(--shadow-md), var(--shadow-glow); }
+  50% { box-shadow: var(--shadow-lg), 0 0 48px rgba(88, 166, 255, 0.4); }
+}
+
+.btn-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}

@@ -1,0 +1,85 @@
+title: "Priya Ranjan Sahu"
+description: "Senior SRE / DevOps Lead / Cloud Architect — 16+ years building production systems at scale across GCP, AWS, Azure. 3× Google Cloud Professional Certified."
+url: "https://priyaranjan-sahu.github.io"
+baseurl: ""
+author:
+  name: "Priya Ranjan Sahu"
+  email: "onlysworld@gmail.com"
+  linkedin: "https://www.linkedin.com/in/priyaranjan-sahu/"
+  github: "https://github.com/priyaranjan-sahu"
+  devto: "https://dev.to/priyaranjansahu/"
+  medium: "https://priyaranjan-sahu.medium.com/"
+  blog: "https://linwintech.blogspot.com/"
+  sponsor: "https://github.com/sponsors/priyaranjan-sahu"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: plain
+    bold_every: 8
+    line_numbers: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+sass:
+  style: compressed
+  sourcemap: never
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+  - README.md
+  - LICENSE
+  - "*.md"
+  - "*.sh"
+  - "*.bat"
+
+# Performance
+future: false
+unpublished: false
+
+# Pagination (if blog added later)
+# pagination:
+#   enabled: true
+#   per_page: 10
+#   permalink: /blog/page:num/
+#   title: ":title"

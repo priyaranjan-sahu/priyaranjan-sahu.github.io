@@ -1,0 +1,18 @@
+// ============================================================================
+// MAIN STYLESHEET — Priya Ranjan Sahu Portfolio
+// ============================================================================
+
+// Import order matters: variables -> base -> layout -> components -> pages
+@import "variables";
+@import "base";
+@import "layout";
+@import "navigation";
+@import "buttons";
+@import "cards";
+@import "hero";
+@import "footer";
+@import "animations";
+
+// Project-specific styles
+@import "projects";
+@import "about";

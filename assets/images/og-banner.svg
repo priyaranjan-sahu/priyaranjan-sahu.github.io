@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117"/>
+      <stop offset="100%" style="stop-color:#161B22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58A6FF"/>
+      <stop offset="50%" style="stop-color:#A371F7"/>
+      <stop offset="100%" style="stop-color:#58A6FF"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#58A6FF;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#A371F7;stop-opacity:0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="300" fill="url(#glow)" opacity="0.5"/>
+  <circle cx="1100" cy="530" r="250" fill="url(#glow)" opacity="0.4"/>
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+  <text x="600" y="220" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="72" font-weight="800" fill="#E6EDF3" text-anchor="middle" letter-spacing="-2">Priya Ranjan Sahu</text>
+  <text x="600" y="300" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="32" font-weight="500" fill="url(#accent)" text-anchor="middle" letter-spacing="2">Senior SRE / DevOps Lead / Cloud Architect</text>
+  <text x="600" y="370" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="22" font-weight="400" fill="#8B949E" text-anchor="middle">16+ Years Experience · 3× GCP Professional Certs</text>
+  <text x="600" y="450" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="500" fill="#58A6FF" text-anchor="middle" letter-spacing="3">GCP · AWS · KUBERNETES · TERRAFORM · CI/CD</text>
+  <rect x="0" y="626" width="1200" height="4" fill="url(#accent)"/>
+</svg>

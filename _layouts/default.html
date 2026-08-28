@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+  <!-- Primary Meta -->
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }} — {{ site.description }}</title>
+  <meta name="title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="Senior SRE, DevOps Lead, Cloud Architect, GCP, AWS, Azure, Kubernetes, Terraform, FinOps, DevSecOps, Platform Engineering">
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | relative_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{% if page.layout == 'project' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | relative_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-banner.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-banner.svg">
+  <meta name="twitter:creator" content="@priyaranjansahu">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}",
+    "sameAs": [
+      "{{ site.author.linkedin }}",
+      "{{ site.author.github }}",
+      "{{ site.author.devto }}",
+      "{{ site.author.medium }}"
+    ],
+    "jobTitle": "Senior SRE / DevOps Lead / Cloud Architect",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance / Consulting"
+    },
+    "knowsAbout": [
+      "Google Cloud Platform", "Amazon Web Services", "Microsoft Azure",
+      "Kubernetes", "Terraform", "FinOps", "DevSecOps", "Platform Engineering",
+      "Site Reliability Engineering", "CI/CD", "Infrastructure as Code"
+    ],
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Biju Patnaik University of Technology"
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Cloud Professional Cloud Architect",
+        "credentialCategory": "Certification"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Cloud Professional Cloud DevOps Engineer",
+        "credentialCategory": "Certification"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Cloud Professional Data Engineer",
+        "credentialCategory": "Certification"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.svg' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/images/manifest.json' | relative_url }}">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
+  {% seo %}
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Theme toggle (rendered by JS) -->
+  <div id="theme-toggle-container" aria-label="Theme toggle"></div>
+
+  <!-- Navigation -->
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="{{ site.title }} - Home">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 12h16M8 16h12M8 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">PRS</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-menu" class="nav-menu" role="menubar">
+        <li role="none"><a href="{{ '/' | relative_url }}" class="nav-link" role="menuitem">Home</a></li>
+        <li role="none"><a href="{{ '/projects/' | relative_url }}" class="nav-link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="{{ '/about/' | relative_url }}" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="{{ '/#contact' | relative_url }}" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Progress bar -->
+  <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page scroll progress"></div>
+
+  <main id="main-content" role="main">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="{{ '/' | relative_url }}" class="footer-logo" aria-label="{{ site.title }} - Home">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 12h16M8 16h12M8 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">PRS</span>
+        </a>
+        <p class="footer-tagline">Senior SRE / DevOps Lead / Cloud Architect</p>
+        <p class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. Built with automation, hardened with security, priced with FinOps.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Platforms">
+        <h4>Platforms</h4>
+        <ul>
+          <li><a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="{{ site.author.devto }}" target="_blank" rel="noopener noreferrer">Dev.to</a></li>
+          <li><a href="{{ site.author.medium }}" target="_blank" rel="noopener noreferrer">Medium</a></li>
+          <li><a href="{{ site.author.blog }}" target="_blank" rel="noopener noreferrer">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h4>Connect</h4>
+        <ul class="contact-links">
+          <li><a href="mailto:{{ site.author.email }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></li>
+          <li><a href="{{ site.author.sponsor }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Sponsor</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Designed & built by <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer">{{ site.author.name }}</a> — Open source, production-grade.</p>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>
