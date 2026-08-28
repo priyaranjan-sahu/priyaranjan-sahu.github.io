@@ -264,10 +264,10 @@ title: Home
         <div class="card-content">
           <span class="card-category">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            DevOps Portfolio
+            DevOps & Security Portfolio
           </span>
           <h3 class="card-title">multi-cloud-devops-portfolio</h3>
-          <p class="card-description">Real-world DevOps & Security portfolio — Terraform, Ansible, ArgoCD GitOps, OPA policies & CI/CD across AWS, Azure and GCP.</p>
+          <p class="card-description">5 real-world projects: Multi-Cloud IaC (Terraform/Ansible), Kubernetes GitOps (ArgoCD/Helm/OPA), CI/CD Pipelines (Jenkins/GitHub Actions/Docker), Cloud Security (GuardDuty/CIS Benchmarks), and Cost Optimization (Lambda/Cost Explorer).</p>
           <div class="card-tech">
             <span class="tech-tag">Terraform</span>
             <span class="tech-tag">Ansible</span>
@@ -275,6 +275,7 @@ title: Home
             <span class="tech-tag">Helm</span>
             <span class="tech-tag">OPA</span>
             <span class="tech-tag">Jenkins</span>
+            <span class="tech-tag">Docker</span>
           </div>
         </div>
         <div class="card-footer">
@@ -313,138 +314,192 @@ title: Home
     <div class="tech-grid reveal delay-2">
 
       <div class="tech-category">
-        <h3 class="tech-category-title">Cloud & Infrastructure</h3>
+        <h3 class="tech-category-title">Cloud Platforms</h3>
         <div class="tech-items">
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Google Cloud Platform
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Amazon Web Services
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Microsoft Azure
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Terraform
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Ansible
-          </span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>GCP</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>AWS</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Azure</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>OCI</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Alibaba Cloud</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Tencent Cloud</span>
         </div>
       </div>
 
       <div class="tech-category">
-        <h3 class="tech-category-title">Container Orchestration</h3>
+        <h3 class="tech-category-title">GCP Services</h3>
         <div class="tech-items">
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Kubernetes
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Docker
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Helm
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Istio
-          </span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Compute Engine</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>GKE</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Cloud Functions</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cloud Storage</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cloud SQL</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>BigQuery</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cloud IAM</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cloud Armor</span>
         </div>
       </div>
 
       <div class="tech-category">
-        <h3 class="tech-category-title">CI/CD & Automation</h3>
+        <h3 class="tech-category-title">AWS Services</h3>
         <div class="tech-items">
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            GitHub Actions
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            GitLab CI
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Jenkins
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            ArgoCD
-          </span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>ECS/EKS</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Lambda</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>S3</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>VPC</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>CloudFront</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Route 53</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>IAM</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>DynamoDB</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Redshift</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Azure Services</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>AKS</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Azure Functions</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Blob Storage</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cosmos DB</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Azure AD</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Key Vault</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>DevOps</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Logic Apps</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Infrastructure as Code</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Terraform</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Ansible</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Puppet</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>CloudFormation</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>ARM Templates</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Container & Orchestration</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Kubernetes</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Docker</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>OpenShift</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>containerd</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>CRI-O</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Helm</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">CI/CD & DevOps</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>GitHub Actions</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Jenkins</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>GitLab CI</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>ArgoCD</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Selenium</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Azure DevOps</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Databases</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>PostgreSQL</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>MySQL</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>MongoDB</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Redis</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Elasticsearch</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>DynamoDB</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cosmos DB</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Oracle DB</span>
         </div>
       </div>
 
       <div class="tech-category">
         <h3 class="tech-category-title">Monitoring & Observability</h3>
         <div class="tech-items">
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Prometheus
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Grafana
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            ELK Stack
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Datadog
-          </span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Prometheus</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Grafana</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Datadog</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Splunk</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>ELK Stack</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Nagios</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Zabbix</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>OpenTelemetry</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Dynatrace</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>New Relic</span>
         </div>
       </div>
 
       <div class="tech-category">
-        <h3 class="tech-category-title">Programming & Scripting</h3>
+        <h3 class="tech-category-title">Scripting & Coding</h3>
         <div class="tech-items">
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Python
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Bash/Shell
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Go
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            PowerShell
-          </span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Bash</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Python</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>PowerShell</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>PHP</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>YAML/JSON/XML</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>JavaScript</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Lua</span>
         </div>
       </div>
 
       <div class="tech-category">
-        <h3 class="tech-category-title">Security & Networking</h3>
+        <h3 class="tech-category-title">Security & DevSecOps</h3>
         <div class="tech-items">
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            Zero Trust Architecture
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-professional"></span>
-            VPN/Networking
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Vault
-          </span>
-          <span class="tech-item">
-            <span class="tech-dot dot-advanced"></span>
-            Cert-Manager
-          </span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>WAF (Cloudflare/AWS/Azure)</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>OWASP</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>SonarQube</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Burp Suite</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>nMap/Wireshark</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>ModSecurity</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">FinOps & Cost Optimization</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>CloudHealth</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Spot.io</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Azure Cost Management</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>AWS Budgets</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Apptio Cloudability</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">AI & GenAI Tooling</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>GitHub Copilot</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>Claude Code</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Cursor</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Gemini CLI</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>OpenCode</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Ollama</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">API & Integration</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>REST API</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>API Gateway (AWS/Azure/Apigee)</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>OAuth 2.0/JWT</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Swagger/OpenAPI</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Kong API</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3 class="tech-category-title">Compliance & Frameworks</h3>
+        <div class="tech-items">
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>PCI-DSS</span>
+          <span class="tech-item"><span class="tech-dot dot-professional"></span>ISO 27001</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>HIPAA/GDPR</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>ITIL</span>
+          <span class="tech-item"><span class="tech-dot dot-advanced"></span>Agile/Scrum</span>
         </div>
       </div>
 

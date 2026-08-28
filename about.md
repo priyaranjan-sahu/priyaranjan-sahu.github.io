@@ -114,10 +114,14 @@ title: About
           <h3 class="skill-title">Cloud Platforms</h3>
         </div>
         <div class="skill-tags">
-          <span class="skill-tag">Google Cloud Platform</span>
-          <span class="skill-tag">Amazon Web Services</span>
-          <span class="skill-tag">Microsoft Azure</span>
-          <span class="skill-tag">DigitalOcean</span>
+          <span class="skill-tag">GCP</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">OCI</span>
+          <span class="skill-tag">Alibaba Cloud</span>
+          <span class="skill-tag">Tencent Cloud</span>
+          <span class="skill-tag">Hybrid Cloud</span>
+          <span class="skill-tag">IaaS/PaaS/SaaS</span>
         </div>
       </div>
 
@@ -131,9 +135,10 @@ title: About
         <div class="skill-tags">
           <span class="skill-tag">Terraform</span>
           <span class="skill-tag">Ansible</span>
-          <span class="skill-tag">Pulumi</span>
+          <span class="skill-tag">Puppet</span>
           <span class="skill-tag">CloudFormation</span>
           <span class="skill-tag">ARM Templates</span>
+          <span class="skill-tag">Resource Manager</span>
         </div>
       </div>
 
@@ -147,11 +152,11 @@ title: About
         <div class="skill-tags">
           <span class="skill-tag">Kubernetes</span>
           <span class="skill-tag">Docker</span>
+          <span class="skill-tag">OpenShift</span>
+          <span class="skill-tag">containerd</span>
+          <span class="skill-tag">CRI-O</span>
           <span class="skill-tag">Helm</span>
-          <span class="skill-tag">Istio</span>
-          <span class="skill-tag">ArgoCD</span>
-          <span class="skill-tag">GKE</span>
-          <span class="skill-tag">EKS</span>
+          <span class="skill-tag">GKE/EKS/AKS</span>
         </div>
       </div>
 
@@ -165,11 +170,15 @@ title: About
         <div class="skill-tags">
           <span class="skill-tag">Prometheus</span>
           <span class="skill-tag">Grafana</span>
-          <span class="skill-tag">ELK Stack</span>
           <span class="skill-tag">Datadog</span>
-          <span class="skill-tag">CloudWatch</span>
-          <span class="skill-tag">Loki</span>
-          <span class="skill-tag">Jaeger</span>
+          <span class="skill-tag">Splunk</span>
+          <span class="skill-tag">ELK</span>
+          <span class="skill-tag">Nagios</span>
+          <span class="skill-tag">Zabbix</span>
+          <span class="skill-tag">OpenTelemetry</span>
+          <span class="skill-tag">Dynatrace</span>
+          <span class="skill-tag">New Relic</span>
+          <span class="skill-tag">PRTG</span>
         </div>
       </div>
 
@@ -182,10 +191,11 @@ title: About
         </div>
         <div class="skill-tags">
           <span class="skill-tag">GitHub Actions</span>
-          <span class="skill-tag">GitLab CI</span>
           <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">GitLab CI</span>
           <span class="skill-tag">ArgoCD</span>
-          <span class="skill-tag">Flux</span>
+          <span class="skill-tag">Azure DevOps</span>
+          <span class="skill-tag">Selenium</span>
           <span class="skill-tag">SonarQube</span>
         </div>
       </div>
@@ -195,15 +205,16 @@ title: About
           <div class="skill-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <h3 class="skill-title">Programming & Scripting</h3>
+          <h3 class="skill-title">Scripting & Coding</h3>
         </div>
         <div class="skill-tags">
-          <span class="skill-tag">Python</span>
           <span class="skill-tag">Bash</span>
-          <span class="skill-tag">Go</span>
+          <span class="skill-tag">Python</span>
           <span class="skill-tag">PowerShell</span>
-          <span class="skill-tag">HCL</span>
-          <span class="skill-tag">YAML</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">YAML/JSON/XML</span>
+          <span class="skill-tag">Lua</span>
         </div>
       </div>
 
@@ -212,14 +223,17 @@ title: About
           <div class="skill-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <h3 class="skill-title">Security & Compliance</h3>
+          <h3 class="skill-title">Security & DevSecOps</h3>
         </div>
         <div class="skill-tags">
-          <span class="skill-tag">Zero Trust</span>
-          <span class="skill-tag">Vault</span>
-          <span class="skill-tag">Cert-Manager</span>
-          <span class="skill-tag">OPA/Gatekeeper</span>
-          <span class="skill-tag">CIS Benchmarks</span>
+          <span class="skill-tag">WAF</span>
+          <span class="skill-tag">OWASP</span>
+          <span class="skill-tag">Burp Suite</span>
+          <span class="skill-tag">nMap</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">ModSecurity</span>
+          <span class="skill-tag">PCI-DSS</span>
+          <span class="skill-tag">ISO 27001</span>
         </div>
       </div>
 
@@ -228,15 +242,90 @@ title: About
           <div class="skill-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
           </div>
-          <h3 class="skill-title">Data & Databases</h3>
+          <h3 class="skill-title">Databases</h3>
         </div>
         <div class="skill-tags">
           <span class="skill-tag">PostgreSQL</span>
           <span class="skill-tag">MySQL</span>
           <span class="skill-tag">MongoDB</span>
           <span class="skill-tag">Redis</span>
+          <span class="skill-tag">Elasticsearch</span>
+          <span class="skill-tag">DynamoDB</span>
+          <span class="skill-tag">Cosmos DB</span>
+          <span class="skill-tag">Oracle DB</span>
+          <span class="skill-tag">MariaDB</span>
+          <span class="skill-tag">pgvector</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-8">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="skill-title">FinOps & Cost Optimization</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">CloudHealth</span>
+          <span class="skill-tag">Spot.io</span>
+          <span class="skill-tag">Azure Cost Management</span>
+          <span class="skill-tag">AWS Budgets</span>
+          <span class="skill-tag">Apptio Cloudability</span>
+          <span class="skill-tag">GCP Billing</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="skill-title">AI & GenAI Tooling</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">GitHub Copilot</span>
+          <span class="skill-tag">Claude Code</span>
+          <span class="skill-tag">Cursor</span>
+          <span class="skill-tag">Gemini CLI</span>
+          <span class="skill-tag">OpenCode</span>
+          <span class="skill-tag">Ollama</span>
+          <span class="skill-tag">ChatGPT</span>
+          <span class="skill-tag">DeepSeek</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-1">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          </div>
+          <h3 class="skill-title">API & Integration</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">API Gateway</span>
+          <span class="skill-tag">OAuth 2.0/JWT</span>
+          <span class="skill-tag">Swagger/OpenAPI</span>
+          <span class="skill-tag">Kong</span>
+          <span class="skill-tag">Apigee</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-2">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="skill-title">Data Engineering</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">ETL Pipelines</span>
+          <span class="skill-tag">Big Data Analytics</span>
+          <span class="skill-tag">Data Warehousing</span>
+          <span class="skill-tag">Predictive Analytics</span>
+          <span class="skill-tag">DataOps</span>
           <span class="skill-tag">BigQuery</span>
-          <span class="skill-tag">Cloud SQL</span>
+          <span class="skill-tag">Redshift</span>
         </div>
       </div>
 

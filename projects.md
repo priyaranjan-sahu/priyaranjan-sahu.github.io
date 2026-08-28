@@ -105,10 +105,10 @@ title: Projects
         <div class="card-content">
           <span class="card-category">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            DevOps Portfolio
+            DevOps & Security Portfolio
           </span>
           <h3 class="card-title">multi-cloud-devops-portfolio</h3>
-          <p class="card-description">Real-world DevOps & Security portfolio — Terraform, Ansible, ArgoCD GitOps, OPA policies & CI/CD across AWS, Azure and GCP.</p>
+          <p class="card-description">5 real-world projects: Multi-Cloud IaC (Terraform/Ansible), Kubernetes GitOps (ArgoCD/Helm/OPA), CI/CD Pipelines (Jenkins/GitHub Actions/Docker), Cloud Security (GuardDuty/CIS Benchmarks), and Cost Optimization (Lambda/Cost Explorer).</p>
           <div class="card-tech">
             <span class="tech-tag">Terraform</span>
             <span class="tech-tag">Ansible</span>
@@ -116,6 +116,7 @@ title: Projects
             <span class="tech-tag">Helm</span>
             <span class="tech-tag">OPA</span>
             <span class="tech-tag">Jenkins</span>
+            <span class="tech-tag">Docker</span>
           </div>
         </div>
         <div class="card-footer">
@@ -212,14 +213,15 @@ title: Projects
         <div class="card-content">
           <span class="card-category">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            Docker
+            Docker & Terraform
           </span>
           <h3 class="card-title">helloworlddb-docker</h3>
-          <p class="card-description">Python + PostgreSQL starter app in Docker Compose — clean, minimal, ready to build on.</p>
+          <p class="card-description">Python + PostgreSQL starter app with Docker Compose and Terraform — clean, minimal, ready to build on.</p>
           <div class="card-tech">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Docker</span>
             <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Terraform</span>
           </div>
         </div>
         <div class="card-footer">
