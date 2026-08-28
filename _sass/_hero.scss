@@ -181,7 +181,11 @@
           transform: translateY(-2px);
           box-shadow: var(--shadow-md);
         }
-        svg { width: 16px; height: 16px; }
+        svg {
+          width: 16px;
+          height: 16px;
+          stroke: currentColor;
+        }
       }
       .cloud-badge--aws { background: rgba(255, 153, 0, 0.15); color: #ff9900; border: 1px solid rgba(255, 153, 0, 0.3); }
       .cloud-badge--azure { background: rgba(0, 137, 214, 0.15); color: #0089d6; border: 1px solid rgba(0, 137, 214, 0.3); }
