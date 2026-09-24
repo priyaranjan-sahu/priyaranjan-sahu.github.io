@@ -360,7 +360,9 @@
             <a href="#" class="logo">PRIYA<span>_</span>RANJAN</a>
             <div class="nav-links">
                 <a href="#about">// about</a>
+                <a href="#tenets">// tenets</a>
                 <a href="#projects">// architecture</a>
+                <a href="#impact">// impact</a>
                 <a href="#arsenal">// arsenal</a>
                 <a href="https://github.com/priyaranjan-sahu" target="_blank">// github</a>
             </div>
@@ -423,17 +425,35 @@
             </div>
 
             <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;" class="gs-reveal">
-                <span class="tech-tag" style="border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">GCP Cloud Architect</span>
-                <span class="tech-tag" style="border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">GCP DevOps Engineer</span>
-                <span class="tech-tag" style="border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">GCP Data Engineer</span>
-                <span class="tech-tag" style="border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">100+ Azure Resources</span>
-                <span class="tech-tag" style="border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">OCI</span>
-                <span class="tech-tag" style="border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">Alibaba</span>
+                <a href="#impact" class="btn" style="background: var(--neon-green); color: black;">View Enterprise Impact</a>
+                <a href="https://github.com/priyaranjan-sahu" target="_blank" class="btn">GitHub Profile</a>
             </div>
         </section>
 
-        <section id="projects" style="padding: 8rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">01.</span> Core Architecture</h2>
+        <!-- NEW SECTION: Core Tenets -->
+        <section id="tenets" style="padding: 4rem 0;">
+            <h2 class="section-title gs-reveal"><span class="highlight">01.</span> Core Architectural Tenets</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card gs-reveal" style="border-top: 3px solid var(--neon-blue);">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--neon-blue);">Platform as a Product</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6;">I treat infrastructure as an internal product. By abstracting complexity into self-service, GitOps-driven pipelines, I drastically reduce cognitive load for engineering teams and accelerate feature delivery from weeks to hours.</p>
+                </div>
+                
+                <div class="project-card gs-reveal" style="border-top: 3px solid var(--neon-green);">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--neon-green);">FinOps-Driven Scale</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6;">Architecting for scale isn't just about handling traffic; it's about unit economics. I build auto-scaling, spot-instance orchestrated environments that drive down cost-per-compute while maintaining strict SLAs.</p>
+                </div>
+                
+                <div class="project-card gs-reveal" style="border-top: 3px solid var(--neon-purple);">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--neon-purple);">Zero-Trust & Policy as Code</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6;">Security cannot be an afterthought. I enforce strict OPA/Gatekeeper policies, CIS benchmarks, and identity-aware proxies directly at the infrastructure layer to guarantee compliance by default.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" style="padding: 4rem 0;">
+            <h2 class="section-title gs-reveal"><span class="highlight">02.</span> Open Source Architecture</h2>
             
             <div class="projects-grid">
                 
@@ -488,8 +508,65 @@
             </div>
         </section>
 
+        <!-- NEW SECTION: Enterprise Impact Case Studies -->
+        <section id="impact" style="padding: 4rem 0;">
+            <h2 class="section-title gs-reveal"><span class="highlight">03.</span> Enterprise Impact & Case Studies</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <!-- Case Study 1 -->
+                <div class="project-card gs-reveal" style="padding: 3rem;">
+                    <span class="project-type" style="color: #f97316;">LARGE-SCALE TRANSFORMATION</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Global Hybrid-Cloud Migration & FinOps Optimization</h3>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--neon-blue); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> CONTEXT_&_PROBLEM</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Legacy on-premise data warehouses and monolithic applications were causing severe deployment bottlenecks, dropping critical SLAs, and generating excessive unoptimized annual infrastructure spend.</p>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--neon-green); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> ARCHITECTURAL_SOLUTION</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Designed a resilient hybrid topology bridging on-premise mainframes with GCP BigQuery and AKS/EKS containerized microservices. Implemented modular Terraform IaC and ArgoCD for immutable, zero-touch GitOps deployments across multiple global regions.</p>
+                    </div>
+
+                    <div>
+                        <h4 style="color: var(--neon-purple); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> BUSINESS_IMPACT</h4>
+                        <ul style="color: var(--text-muted); line-height: 1.6; padding-left: 1.5rem;">
+                            <li>Achieved <strong>99.99% availability</strong> during peak traffic by eliminating single points of failure.</li>
+                            <li>Reduced Mean Time To Recovery (MTTR) by <strong>60%</strong> through automated self-healing.</li>
+                            <li>Shrank recurring cloud spend by <strong>30%+</strong> via FinOps lifecycle management (Rightsizing, Spot-orchestration, and committed use discounts).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="project-card gs-reveal" style="padding: 3rem;">
+                    <span class="project-type" style="color: #10b981;">LEADERSHIP & OBSERVABILITY</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Establishing a Multi-Cloud SRE Center of Excellence</h3>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--neon-blue); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> CONTEXT_&_PROBLEM</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Engineering teams spanning multiple product lines were operating in silos with fragmented monitoring, leading to alert fatigue, shadow IT, and missed Service Level Objectives (SLOs).</p>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--neon-green); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> ARCHITECTURAL_SOLUTION</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Architected and deployed a centralized observability stack (OpenTelemetry, Prometheus, Datadog) spanning AWS, Azure, and GCP. Drafted cross-organization SLIs/SLOs, established strict error budget policies, and automated incident response runbooks.</p>
+                    </div>
+
+                    <div>
+                        <h4 style="color: var(--neon-purple); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> BUSINESS_IMPACT</h4>
+                        <ul style="color: var(--text-muted); line-height: 1.6; padding-left: 1.5rem;">
+                            <li>Unified telemetry across 3 continents, providing C-level executives with real-time operational dashboards.</li>
+                            <li>Reduced P1 incident resolution time from hours to <strong>under 15 minutes</strong>.</li>
+                            <li>Fostered a culture of engineering excellence by directly mentoring and upskilling <strong>50+ engineers and 10+ managers</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="arsenal" style="padding: 4rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">02.</span> Technical Arsenal</h2>
+            <h2 class="section-title gs-reveal"><span class="highlight">04.</span> Technical Arsenal</h2>
             
             <div class="tabs-container gs-reveal" style="background: var(--surface); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px);">
                 <div class="tabs-header" style="display: flex; overflow-x: auto; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.3);">
@@ -571,7 +648,7 @@
         </section>
 
         <section id="education" style="padding: 4rem 0 8rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">03.</span> Education & Honors</h2>
+            <h2 class="section-title gs-reveal"><span class="highlight">05.</span> Education & Honors</h2>
             
             <div class="projects-grid">
                 <!-- Honors -->
