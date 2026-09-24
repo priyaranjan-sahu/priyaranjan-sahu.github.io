@@ -580,67 +580,94 @@
                 <div class="tabs-content" style="padding: 3rem;">
                     <!-- CLOUD TAB -->
                     <div id="tab-cloud" class="tab-pane active" style="display: block;">
-                        <h3 style="color: var(--neon-blue); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> CLOUD_PLATFORMS_&_INFRASTRUCTURE</h3>
-                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                            <span class="tech-tag">GCP (GKE, Compute, Storage, Big Query)</span>
-                            <span class="tech-tag">AWS (EKS, Lambda, S3, RDS)</span>
-                            <span class="tech-tag">Azure (AKS, VMs, Cosmos DB)</span>
-                            <span class="tech-tag">OCI (ADW, ATP)</span>
-                            <span class="tech-tag">Alibaba Cloud</span>
-                            <span class="tech-tag">Tencent</span>
-                            <span class="tech-tag">Cloudblue / Ingram Micro Cloud</span>
+                        <h3 style="color: var(--neon-blue); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> PUBLIC_&_HYBRID_CLOUD</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                            <span class="tech-tag">Google Cloud (GCP)</span> <span class="tech-tag">Amazon Web Services (AWS)</span>
+                            <span class="tech-tag">Microsoft Azure</span> <span class="tech-tag">Oracle Cloud (OCI)</span>
+                            <span class="tech-tag">Alibaba Cloud</span> <span class="tech-tag">Tencent Cloud</span>
+                            <span class="tech-tag">CloudBlue</span> <span class="tech-tag">Ingram Micro Cloud</span>
+                            <span class="tech-tag">Salesforce</span> <span class="tech-tag">Hybrid Cloud</span>
+                        </div>
+
+                        <h3 style="color: var(--neon-blue); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> CLOUD_NATIVE_SERVICES</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                            <span class="tech-tag">GCP Compute Engine</span> <span class="tech-tag">AWS EC2 / Fargate</span> <span class="tech-tag">Azure VMs</span>
+                            <span class="tech-tag">Cloud Functions / Lambda</span> <span class="tech-tag">Cloud Storage / S3 / Blob</span>
+                            <span class="tech-tag">VPC / Cloud DNS / Route 53</span> <span class="tech-tag">Cloud IAM / AWS IAM</span>
+                            <span class="tech-tag">Cloud CDN / Cloudfront</span> <span class="tech-tag">KMS / Azure Key Vault</span>
+                            <span class="tech-tag">GCP Anthos / Azure Arc</span> <span class="tech-tag">Transit Gateway</span>
                         </div>
                     </div>
 
                     <!-- DEVOPS TAB -->
                     <div id="tab-devops" class="tab-pane" style="display: none;">
-                        <h3 style="color: var(--neon-green); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> ORCHESTRATION_&_IAC</h3>
-                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-                            <span class="tech-tag">Kubernetes (AKS/EKS/GKE)</span>
-                            <span class="tech-tag">Docker / containerd</span>
-                            <span class="tech-tag">Terraform / Terragrunt</span>
-                            <span class="tech-tag">Ansible / Puppet</span>
-                            <span class="tech-tag">ArgoCD / GitOps</span>
-                            <span class="tech-tag">Jenkins / GitLab CI</span>
+                        <h3 style="color: var(--neon-green); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> ORCHESTRATION_&_CONTAINERS</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                            <span class="tech-tag">Kubernetes (K8s)</span> <span class="tech-tag">GKE / EKS / AKS</span>
+                            <span class="tech-tag">Docker / containerd / CRI-O</span> <span class="tech-tag">OpenShift</span>
+                            <span class="tech-tag">Helm / Kustomize</span> <span class="tech-tag">Istio / Linkerd (Service Mesh)</span>
+                        </div>
+
+                        <h3 style="color: var(--neon-green); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> INFRASTRUCTURE_AS_CODE_&_CI/CD</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                            <span class="tech-tag">Terraform / Terragrunt</span> <span class="tech-tag">Pulumi / Crossplane</span>
+                            <span class="tech-tag">Ansible / Puppet / Chef</span> <span class="tech-tag">ArgoCD / FluxCD (GitOps)</span>
+                            <span class="tech-tag">GitHub Actions / GitLab CI</span> <span class="tech-tag">Jenkins / Azure DevOps</span>
+                            <span class="tech-tag">Packer</span> <span class="tech-tag">Argo Rollouts</span>
                         </div>
                     </div>
 
                     <!-- AI & DATA TAB -->
                     <div id="tab-ai" class="tab-pane" style="display: none;">
-                        <h3 style="color: #ec4899; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> AI_&_DATABASES</h3>
-                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-                            <span class="tech-tag">GitHub Copilot / Cursor / Cline</span>
-                            <span class="tech-tag">Vertex AI / ChatGPT / Claude</span>
-                            <span class="tech-tag">Meta LLaMA / DeepSeek</span>
-                            <span class="tech-tag">PostgreSQL / MySQL / MongoDB</span>
-                            <span class="tech-tag">Redis / ElasticSearch / pgvector</span>
-                            <span class="tech-tag">DataOps / ETL Pipelines</span>
+                        <h3 style="color: #ec4899; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> ARTIFICIAL_INTELLIGENCE_&_LLMS</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                            <span class="tech-tag">GitHub Copilot / Cursor / Cline</span> <span class="tech-tag">Vertex AI</span>
+                            <span class="tech-tag">OpenAI / ChatGPT</span> <span class="tech-tag">Anthropic Claude</span>
+                            <span class="tech-tag">Meta LLaMA / DeepSeek</span> <span class="tech-tag">LangChain / LlamaIndex</span>
+                            <span class="tech-tag">RAG Architectures</span> <span class="tech-tag">HuggingFace</span>
+                        </div>
+
+                        <h3 style="color: #ec4899; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> DATA_ENGINEERING_&_DATABASES</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                            <span class="tech-tag">PostgreSQL / MySQL</span> <span class="tech-tag">MongoDB / Cosmos DB / DynamoDB</span>
+                            <span class="tech-tag">Redis / ElasticSearch</span> <span class="tech-tag">pgvector / Pinecone (Vector DBs)</span>
+                            <span class="tech-tag">BigQuery / Redshift / Snowflake</span> <span class="tech-tag">Apache Kafka / Airflow</span>
+                            <span class="tech-tag">dbt (Data Build Tool)</span> <span class="tech-tag">ETL / DataOps</span>
                         </div>
                     </div>
 
                     <!-- SECURITY TAB -->
                     <div id="tab-security" class="tab-pane" style="display: none;">
-                        <h3 style="color: var(--neon-purple); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> OBSERVABILITY_&_DEVSECOPS</h3>
-                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-                            <span class="tech-tag">Prometheus / Grafana / ELK</span>
-                            <span class="tech-tag">Datadog / Dynatrace / Splunk</span>
-                            <span class="tech-tag">OpenTelemetry</span>
-                            <span class="tech-tag">OPA / Gatekeeper</span>
-                            <span class="tech-tag">SonarQube / VeraCode</span>
-                            <span class="tech-tag">CloudHealth / Spot.io / FinOps</span>
+                        <h3 style="color: var(--neon-purple); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> OBSERVABILITY_&_FINOPS</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                            <span class="tech-tag">Prometheus / Grafana</span> <span class="tech-tag">Datadog / Dynatrace</span>
+                            <span class="tech-tag">OpenTelemetry / Jaeger</span> <span class="tech-tag">ELK Stack / Splunk / Loki</span>
+                            <span class="tech-tag">PagerDuty / VictorOps</span> <span class="tech-tag">CloudHealth / Spot.io / Apptio</span>
+                        </div>
+
+                        <h3 style="color: var(--neon-purple); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> DEVSECOPS_&_SECURITY</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                            <span class="tech-tag">HashiCorp Vault</span> <span class="tech-tag">OPA / Gatekeeper</span>
+                            <span class="tech-tag">SonarQube / VeraCode</span> <span class="tech-tag">Falco / Trivy / Snyk</span>
+                            <span class="tech-tag">AWS WAF / Cloudflare WAF</span> <span class="tech-tag">ModSecurity</span>
+                            <span class="tech-tag">PCI-DSS / ISO 27001 / GDPR</span> <span class="tech-tag">Zero-Trust Architectures</span>
                         </div>
                     </div>
 
                     <!-- OTHER TAB -->
                     <div id="tab-other" class="tab-pane" style="display: none;">
-                        <h3 style="color: #64748b; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> OS_&_SCRIPTING</h3>
-                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-                            <span class="tech-tag">Python / Bash / PowerShell</span>
-                            <span class="tech-tag">Linux / Ubuntu / RHEL</span>
-                            <span class="tech-tag">VMware / Hyper-V</span>
-                            <span class="tech-tag">Apache / Nginx / APIs</span>
-                            <span class="tech-tag">PCI-DSS / ISO 27001 / GDPR</span>
-                            <span class="tech-tag">Agile / ITIL / Scrum</span>
+                        <h3 style="color: #64748b; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> SCRIPTING_&_APIS</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                            <span class="tech-tag">Python / Bash / PowerShell</span> <span class="tech-tag">Go (Golang)</span>
+                            <span class="tech-tag">RESTful / gRPC / GraphQL</span> <span class="tech-tag">Kong API / Apigee</span>
+                            <span class="tech-tag">Swagger / OpenAPI</span> <span class="tech-tag">OAuth 2.0 / JWT</span>
+                        </div>
+
+                        <h3 style="color: #64748b; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> OS_&_SYSTEMS</h3>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                            <span class="tech-tag">Linux (Ubuntu, RHEL, CentOS)</span> <span class="tech-tag">Windows Server</span>
+                            <span class="tech-tag">VMware / ESXi / Hyper-V</span> <span class="tech-tag">Nginx / Apache / IIS</span>
+                            <span class="tech-tag">ITIL / ITSM / ServiceNow</span> <span class="tech-tag">Agile / Scrum / Six Sigma</span>
                         </div>
                     </div>
                 </div>
