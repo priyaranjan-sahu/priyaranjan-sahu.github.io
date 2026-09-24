@@ -19,9 +19,35 @@ title: Projects
       <button class="filter-btn" data-filter="monitoring">Monitoring</button>
       <button class="filter-btn" data-filter="security">Security</button>
       <button class="filter-btn" data-filter="automation">Automation</button>
+      <button class="filter-btn" data-filter="tools">Desktop Tools</button>
     </div>
 
     <div class="projects-grid">
+
+      <!-- Vexil Search -->
+      <div class="project-card reveal" data-category="tools">
+        <div class="card-header">
+          <div class="card-tier tier-open-source">Open Source</div>
+        </div>
+        <div class="card-content">
+          <span class="card-category">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Desktop Tools & AI
+          </span>
+          <h3 class="card-title">Vexil Search</h3>
+          <p class="card-description">A blazing fast, privacy-first local AI search engine for your desktop. Built with Rust and Tauri, featuring universal binaries for macOS, Windows, and Linux via automated CI/CD.</p>
+          <div class="card-tech">
+            <span class="tech-tag">Rust</span>
+            <span class="tech-tag">Tauri</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">GitHub Actions</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://priyaranjan-sahu.github.io/vexil-search/" class="btn btn-outline" target="_blank" rel="noopener">Website</a>
+            <a href="https://github.com/priyaranjan-sahu/vexil-search" class="btn btn-outline" target="_blank" rel="noopener">Source Code</a>
+          </div>
+        </div>
+      </div>
 
       <div class="project-card reveal" data-category="cloud">
         <div class="card-header">
