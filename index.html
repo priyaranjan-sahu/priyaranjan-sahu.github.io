@@ -361,7 +361,6 @@
             <div class="nav-links">
                 <a href="#about">// about</a>
                 <a href="#projects">// architecture</a>
-                <a href="#experience">// timeline</a>
                 <a href="#arsenal">// arsenal</a>
                 <a href="https://github.com/priyaranjan-sahu" target="_blank">// github</a>
             </div>
@@ -389,7 +388,7 @@
                 </div>
             </div>
 
-            <div class="stats-grid">
+            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-bottom: 2rem;">
                 <div class="stat-card gs-reveal">
                     <div class="stat-num">10M+</div>
                     <div class="stat-label">Monthly Users</div>
@@ -398,62 +397,29 @@
                     <div class="stat-num">2000+</div>
                     <div class="stat-label">GKE Clusters</div>
                 </div>
-                <div class="stat-card gs-reveal" style="border-color: var(--neon-green);">
-                    <div class="stat-num">600+</div>
-                    <div class="stat-label">Terraform Modules</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: var(--neon-purple);">
-                    <div class="stat-num">3× GCP</div>
-                    <div class="stat-label">Professional Certs</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #f43f5e;">
-                    <div class="stat-num">2000+</div>
-                    <div class="stat-label">Linux Servers</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #3b82f6;">
-                    <div class="stat-num">1000+</div>
-                    <div class="stat-label">Windows Servers</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #06b6d4;">
-                    <div class="stat-num">100+</div>
-                    <div class="stat-label">Azure Resources</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #f59e0b;">
-                    <div class="stat-num">10+</div>
-                    <div class="stat-label">OCI Compartments</div>
-                </div>
                 <div class="stat-card gs-reveal" style="border-color: #10b981;">
                     <div class="stat-num">60%</div>
-                    <div class="stat-label">MTTR Reduction (SRE)</div>
+                    <div class="stat-label">MTTR Reduction</div>
                 </div>
                 <div class="stat-card gs-reveal" style="border-color: #fbbf24;">
                     <div class="stat-num">30%</div>
                     <div class="stat-label">Cloud Cost Reduced</div>
                 </div>
-                <div class="stat-card gs-reveal" style="border-color: #a855f7;">
-                    <div class="stat-num">50+</div>
-                    <div class="stat-label">Engineers Mentored</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #ef4444;">
-                    <div class="stat-num">Global</div>
-                    <div class="stat-label">On-Prem Migrations</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #f97316;">
-                    <div class="stat-num">AWS</div>
-                    <div class="stat-label">Solutions Architecture</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #0284c7;">
-                    <div class="stat-num">CloudBlue</div>
-                    <div class="stat-label">Enterprise Automation</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #2563eb;">
-                    <div class="stat-num">Ingram</div>
-                    <div class="stat-label">Micro Cloud Platforms</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #f43f5e;">
-                    <div class="stat-num">Alibaba</div>
-                    <div class="stat-label">Cloud Infrastructure</div>
-                </div>
+            </div>
+
+            <!-- Secondary Stats as sleek pill badges -->
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 3rem;" class="gs-reveal">
+                <span style="border: 1px solid var(--neon-green); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: var(--neon-green);">600+ Terraform Modules</span>
+                <span style="border: 1px solid var(--neon-purple); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: var(--neon-purple);">3× GCP Certifications</span>
+                <span style="border: 1px solid #f43f5e; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #f43f5e;">2000+ Linux Servers</span>
+                <span style="border: 1px solid #3b82f6; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #3b82f6;">1000+ Windows Servers</span>
+                <span style="border: 1px solid #06b6d4; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #06b6d4;">100+ Azure Resources</span>
+                <span style="border: 1px solid #f97316; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #f97316;">AWS Solutions Architecture</span>
+                <span style="border: 1px solid #0284c7; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #0284c7;">CloudBlue Enterprise</span>
+                <span style="border: 1px solid #2563eb; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #2563eb;">Ingram Micro Platforms</span>
+                <span style="border: 1px solid #f43f5e; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #f43f5e;">Alibaba Cloud</span>
+                <span style="border: 1px solid #ef4444; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #ef4444;">Global Migrations</span>
+                <span style="border: 1px solid #a855f7; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #a855f7;">50+ Engineers Mentored</span>
             </div>
 
             <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;" class="gs-reveal">
@@ -522,52 +488,8 @@
             </div>
         </section>
 
-        <section id="experience" style="padding: 4rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">02.</span> Professional Timeline</h2>
-            
-            <div style="position: relative; padding-left: 2rem; border-left: 2px solid var(--border);" class="gs-reveal">
-                
-                <!-- Role 1 -->
-                <div style="margin-bottom: 3rem; position: relative;">
-                    <div style="position: absolute; left: -2.4rem; top: 0; width: 12px; height: 12px; background: var(--neon-green); border-radius: 50%; box-shadow: 0 0 10px var(--neon-green);"></div>
-                    <span style="font-family: 'Fira Code', monospace; color: var(--neon-green); font-size: 0.9rem;">2026 - Present</span>
-                    <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Multi-Cloud Platform SRE & Delivery Lead</h3>
-                    <h4 style="color: var(--text-muted); font-weight: 400; margin-bottom: 1rem;">Insight Global / Ecolab (Hyderabad, India)</h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Led the architectural transition of Azure-native workloads toward resilient, cloud-agnostic containerized microservices across Azure (AKS) and AWS (EKS). Enforced CIS Benchmarks, OPA/Gatekeeper policy-as-code, and managed SLO governance across hybrid platforms.</p>
-                </div>
-
-                <!-- Role 2 -->
-                <div style="margin-bottom: 3rem; position: relative;" class="gs-reveal">
-                    <div style="position: absolute; left: -2.4rem; top: 0; width: 12px; height: 12px; background: var(--neon-blue); border-radius: 50%; box-shadow: 0 0 10px var(--neon-blue);"></div>
-                    <span style="font-family: 'Fira Code', monospace; color: var(--neon-blue); font-size: 0.9rem;">2022 - 2026</span>
-                    <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">DevOps Lead, GCP Architect</h3>
-                    <h4 style="color: var(--text-muted); font-weight: 400; margin-bottom: 1rem;">AirAsia Technology Centre (Bengaluru, India)</h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Led the migration of legacy data warehouses to a hybrid cloud environment (GCP & Alibaba Cloud). Designed robust CI/CD pipelines, integrated AI-assisted engineering (Copilot, Claude), and optimized cloud costs using FinOps principles, reducing page load times by 15% and improving security by 25%.</p>
-                </div>
-
-                <!-- Role 3 -->
-                <div style="margin-bottom: 3rem; position: relative;" class="gs-reveal">
-                    <div style="position: absolute; left: -2.4rem; top: 0; width: 12px; height: 12px; background: var(--neon-purple); border-radius: 50%; box-shadow: 0 0 10px var(--neon-purple);"></div>
-                    <span style="font-family: 'Fira Code', monospace; color: var(--neon-purple); font-size: 0.9rem;">2019 - 2022</span>
-                    <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Solutions Architect, Technical Lead</h3>
-                    <h4 style="color: var(--text-muted); font-weight: 400; margin-bottom: 1rem;">Datacom Systems Asia (Kuala Lumpur, Malaysia)</h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Designed and deployed end-to-end cloud solutions (AWS, Azure, GCP, CloudBlue) for clients. Mentored a team of 50+ engineers and 10+ managers in resolving complex cloud and infrastructure issues.</p>
-                </div>
-
-                <!-- Role 4 -->
-                <div style="margin-bottom: 3rem; position: relative;" class="gs-reveal">
-                    <div style="position: absolute; left: -2.4rem; top: 0; width: 12px; height: 12px; background: #f97316; border-radius: 50%; box-shadow: 0 0 10px #f97316;"></div>
-                    <span style="font-family: 'Fira Code', monospace; color: #f97316; font-size: 0.9rem;">2014 - 2019</span>
-                    <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Quality Manager & Cloud Automation Engineer</h3>
-                    <h4 style="color: var(--text-muted); font-weight: 400; margin-bottom: 1rem;">Parallels / CloudBlue / Ingram Micro Cloud</h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Automated IT environments using advanced scripting, managed Six Sigma DMAIC improvements, and led QA initiatives. Recognized as "Most Valuable Professional Engineer" for exceptional cloud automation contributions.</p>
-                </div>
-
-            </div>
-        </section>
-
         <section id="arsenal" style="padding: 4rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">03.</span> Technical Arsenal</h2>
+            <h2 class="section-title gs-reveal"><span class="highlight">02.</span> Technical Arsenal</h2>
             
             <div class="tabs-container gs-reveal" style="background: var(--surface); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px);">
                 <div class="tabs-header" style="display: flex; overflow-x: auto; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.3);">
@@ -649,7 +571,7 @@
         </section>
 
         <section id="education" style="padding: 4rem 0 8rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">04.</span> Education & Honors</h2>
+            <h2 class="section-title gs-reveal"><span class="highlight">03.</span> Education & Honors</h2>
             
             <div class="projects-grid">
                 <!-- Honors -->
