@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Ranjan Sahu | Multi-Cloud Architect</title>
+    <meta name="description" content="Multi-Cloud Architect, DevOps Lead, and SRE. Specializing in GCP, AWS, Azure, and FinOps.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        :root {
+            --bg-color: #030305;
+            --grid-color: rgba(32, 194, 14, 0.05);
+            --neon-green: #00ff41;
+            --neon-blue: #00f0ff;
+            --neon-purple: #b026ff;
+            --text-main: #e2e8f0;
+            --text-muted: #64748b;
+            --surface: rgba(10, 10, 15, 0.7);
+            --border: rgba(0, 255, 65, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hacker Grid Background */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: 
+                linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -2;
+            transform: perspective(500px) rotateX(60deg) scale(2.5) translateY(-100px);
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) scale(2.5) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) scale(2.5) translateY(40px); }
+        }
+
+        /* Canvas Particle Network */
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        /* Typography */
+        h1, h2, h3, .mono {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .highlight {
+            color: var(--neon-green);
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+        }
+
+        .highlight-alt {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        /* Header / Nav */
+        header {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(3,3,5,0.9), transparent);
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+        
+        .logo span { color: var(--neon-green); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 80px;
+        }
+
+        .terminal-block {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terminal-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            font-weight: 900;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid var(--neon-green);
+            white-space: nowrap;
+            margin: 0;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--neon-green); } }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .stat-card {
+            background: rgba(10, 10, 15, 0.4);
+            border-left: 2px solid var(--neon-blue);
+            padding: 1.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-num {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Projects Section */
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(90deg, var(--border), transparent);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+            group: hover;
+        }
+
+        .project-card:hover {
+            border-color: var(--neon-purple);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(176, 38, 255, 0.15);
+        }
+
+        .project-type {
+            font-size: 0.8rem;
+            color: var(--neon-blue);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            color: var(--text-main);
+        }
+
+        .project-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-family: 'Fira Code', monospace;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .project-links a:hover {
+            color: var(--neon-green);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 8rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <canvas id="network-canvas"></canvas>
+
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; width: 100%;">
+            <a href="#" class="logo">PRIYA<span>_</span>RANJAN</a>
+            <div class="nav-links">
+                <a href="#about">// about</a>
+                <a href="#projects">// architecture</a>
+                <a href="https://github.com/priyaranjan-sahu" target="_blank">// github</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="hero" id="about">
+            <div class="terminal-block gs-reveal">
+                <p class="mono" style="color: var(--text-muted); margin-bottom: 1rem;">> whoami</p>
+                <div class="typewriter mono highlight" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    Multi-Cloud Architect | DevOps | SRE
+                </div>
+                <h1>Architecting <br><span class="highlight-alt">Global Scale.</span></h1>
+                <p class="subtitle">
+                    16+ years building production systems across GCP, AWS, Azure, OCI, and Alibaba. 
+                    I build automation that makes cloud environments safer, cheaper, and entirely self-operating.
+                </p>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <span class="tech-tag" style="border: 1px solid var(--neon-green); color: var(--neon-green);">GCP Arch</span>
+                    <span class="tech-tag" style="border: 1px solid var(--neon-blue); color: var(--neon-blue);">AWS Solutions</span>
+                    <span class="tech-tag" style="border: 1px solid var(--neon-purple); color: var(--neon-purple);">Azure Sec</span>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card gs-reveal">
+                    <div class="stat-num">2000+</div>
+                    <div class="stat-label">GCP Projects</div>
+                </div>
+                <div class="stat-card gs-reveal" style="border-color: var(--neon-green);">
+                    <div class="stat-num">600+</div>
+                    <div class="stat-label">Terraform Modules</div>
+                </div>
+                <div class="stat-card gs-reveal" style="border-color: var(--neon-purple);">
+                    <div class="stat-num">16+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" style="padding: 8rem 0;">
+            <h2 class="section-title gs-reveal"><span class="highlight">01.</span> Core Architecture</h2>
+            
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card gs-reveal">
+                    <span class="project-type">ENTERPRISE INFRASTRUCTURE</span>
+                    <h3>Multi-Cloud FinOps</h3>
+                    <p>An enterprise-grade cost optimization engine for AWS, GCP & Azure. Features advanced anomaly detection, 5-vector workload rightsizing, and automated KEDA scaling based on FOCUS 1.0 specifications.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python (FastAPI)</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Prometheus</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/priyaranjan-sahu/multi-cloud-finops-enterprise" target="_blank">View Repository →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card gs-reveal">
+                    <span class="project-type">SYSTEMS ENGINEERING</span>
+                    <h3>Vexil Search</h3>
+                    <p>A blazing fast, native desktop application that acts as an AI search engine for your local machine. Built entirely on a Rust engine for 0-latency indexing and zero cloud data leaks.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://priyaranjan-sahu.github.io/vexil-search/" target="_blank">View Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card gs-reveal">
+                    <span class="project-type">AUTOMATION PLAYBOOKS</span>
+                    <h3>Cloud Auto-Scripts</h3>
+                    <p>A massive, open-source library of highly refined Bash, Python, and PowerShell automation scripts used to harden, deploy, and audit complex multi-cloud topologies across global data centers.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">PowerShell</span>
+                        <span class="tech-tag">AWS CLI</span>
+                        <span class="tech-tag">GCloud</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/priyaranjan-sahu/multi-cloud-automation-scripts" target="_blank">View Scripts →</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Designed and built by Priya Ranjan Sahu. Systems online.</p>
+            <p style="margin-top: 1rem; opacity: 0.5;">EOF</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // --- 1. GSAP Scroll Animations ---
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.fromTo(elem, 
+                { y: 50, opacity: 0 },
+                {
+                    y: 0, 
+                    opacity: 1,
+                    duration: 1, 
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 85%", // Trigger when top of element hits 85% of viewport
+                    }
+                }
+            );
+        });
+
+        // --- 2. Interactive Canvas Data Network ---
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles;
+
+        function initCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < 80; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 2 + 1
+                });
+            }
+        }
+
+        let mouse = { x: null, y: null };
+        window.addEventListener('mousemove', e => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+        window.addEventListener('resize', initCanvas);
+
+        function drawNetwork() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.fillStyle = '#00f0ff';
+            ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)';
+            ctx.lineWidth = 1;
+
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                // Bounce off edges
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                // Draw Particle
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Mouse Interaction
+                if (mouse.x != null) {
+                    let dx = mouse.x - p.x;
+                    let dy = mouse.y - p.y;
+                    let dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(0, 255, 65, ${1 - dist/150})`;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.stroke();
+                        ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)'; // Reset
+                    }
+                }
+
+                // Connect Particles
+                for (let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dx = p.x - p2.x;
+                    let dy = p.y - p2.y;
+                    let dist = Math.sqrt(dx*dx + dy*dy);
+                    
+                    if (dist < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(drawNetwork);
+        }
+
+        initCanvas();
+        drawNetwork();
+    </script>
+</body>
+</html>
