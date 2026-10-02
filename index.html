@@ -338,6 +338,107 @@
             background: rgba(0, 240, 255, 0.05);
         }
 
+        /* CTA Buttons */
+        .btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            padding: 0.9rem 1.9rem;
+            border-radius: 6px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            white-space: nowrap;
+            cursor: pointer;
+            border: 1px solid var(--neon-green);
+            background: transparent;
+            color: var(--neon-green);
+            overflow: hidden;
+            transition: color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--neon-green);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+            z-index: 0;
+        }
+
+        .btn > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            color: #030305;
+            box-shadow: 0 0 24px rgba(0, 255, 65, 0.45), 0 0 60px rgba(0, 255, 65, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .btn:hover::before {
+            transform: scaleX(1);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid var(--neon-green);
+            outline-offset: 3px;
+        }
+
+        .btn .btn-icon {
+            display: inline-flex;
+            align-items: center;
+            transition: transform 0.35s ease;
+        }
+
+        .btn:hover .btn-icon {
+            transform: translateX(4px);
+        }
+
+        .btn-secondary {
+            border-color: var(--neon-blue);
+            color: var(--neon-blue);
+        }
+
+        .btn-secondary::before {
+            background: var(--neon-blue);
+        }
+
+        .btn-secondary:hover {
+            color: #030305;
+            box-shadow: 0 0 24px rgba(0, 240, 255, 0.45), 0 0 60px rgba(0, 240, 255, 0.15);
+        }
+
+        .btn-secondary .btn-icon {
+            transform: rotate(-45deg);
+        }
+
+        .btn-secondary:hover .btn-icon {
+            transform: rotate(-45deg) translateX(4px);
+        }
+
+        @media (max-width: 640px) {
+            .btn {
+                padding: 0.8rem 1.4rem;
+                font-size: 0.74rem;
+                letter-spacing: 0.05em;
+                gap: 0.5rem;
+                flex: 1 1 100%;
+            }
+        }
+
         /* Footer */
         footer {
             padding: 4rem 0;
@@ -425,8 +526,18 @@
             </div>
 
             <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;" class="gs-reveal">
-                <a href="#impact" class="btn" style="background: var(--neon-green); color: black;">View Enterprise Impact</a>
-                <a href="https://github.com/priyaranjan-sahu" target="_blank" class="btn">GitHub Profile</a>
+                <a href="#impact" class="btn">
+                    <span>View Enterprise Impact</span>
+                    <span class="btn-icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </span>
+                </a>
+                <a href="https://github.com/priyaranjan-sahu" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <span class="btn-icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 4.9 3.17 9.06 7.57 10.53.55.1.75-.24.75-.54v-1.9c-3.08.67-3.73-1.48-3.73-1.48-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.68.08-.68 1.11.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.7-1.49-2.46-.28-5.05-1.23-5.05-5.5 0-1.21.43-2.2 1.14-2.98-.11-.28-.5-1.41.11-2.94 0 0 .93-.3 3.05 1.14a10.5 10.5 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.22 2.66.11 2.94.71.78 1.14 1.77 1.14 2.98 0 4.28-2.6 5.22-5.07 5.49.4.35.76 1.03.76 2.09v3.1c0 .3.2.65.76.54a11.12 11.12 0 0 0 7.56-10.53C23.1 5.34 18.27.5 12 .5Z"/></svg>
+                    </span>
+                    <span>GitHub Profile</span>
+                </a>
             </div>
         </section>
 
