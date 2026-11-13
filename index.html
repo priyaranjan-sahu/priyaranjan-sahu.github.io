@@ -1,942 +1,2309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priya Ranjan Sahu | Multi-Cloud Architect</title>
-    <meta name="description" content="Multi-Cloud Architect, DevOps Lead, and SRE. Specializing in GCP, AWS, Azure, and FinOps.">
+    <title>Priya Ranjan Sahu | Principal Multi-Cloud Architect & FinOps Leader</title>
     
-    <!-- Fonts -->
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Portfolio of Priya Ranjan Sahu — Principal Multi-Cloud Architect, DevOps Lead, and SRE with 17+ years architecting enterprise scale across GCP, AWS, Azure, and FinOps.">
+    <meta name="keywords" content="Multi-Cloud Architect, FinOps, SRE, DevOps, Kubernetes, GKE, Terraform, GCP, AWS, Azure, Enterprise Architecture">
+    <meta name="author" content="Priya Ranjan Sahu">
+    
+    <!-- Open Graph / Social Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://priyaranjan-sahu.github.io/">
+    <meta property="og:title" content="Priya Ranjan Sahu | Principal Multi-Cloud Architect & FinOps Leader">
+    <meta property="og:description" content="17+ years architecting multi-cloud scale, 2,000+ GKE clusters, and 30%+ cloud spend reduction.">
+    <meta property="twitter:card" content="summary_large_image">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- GSAP for Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Priya Ranjan Sahu",
+      "jobTitle": "Principal Multi-Cloud Architect",
+      "url": "https://priyaranjan-sahu.github.io/",
+      "sameAs": [
+        "https://github.com/priyaranjan-sahu"
+      ],
+      "knowsAbout": ["Multi-Cloud Architecture", "FinOps", "Kubernetes", "DevOps", "Site Reliability Engineering", "Terraform", "Google Cloud", "AWS", "Azure"]
+    }
+    </script>
 
     <style>
+        /* ==========================================================================
+           1. DESIGN TOKENS (W3C DTCG Standard 3-Layer Hierarchy)
+           ========================================================================== */
         :root {
-            --bg-color: #030305;
-            --grid-color: rgba(32, 194, 14, 0.05);
-            --neon-green: #00ff41;
-            --neon-blue: #00f0ff;
-            --neon-purple: #b026ff;
-            --text-main: #e2e8f0;
-            --text-muted: #64748b;
-            --surface: rgba(10, 10, 15, 0.7);
-            --border: rgba(0, 255, 65, 0.2);
+            /* Tier 1: Global Palette */
+            --color-slate-950: #07080d;
+            --color-slate-900: #0e111a;
+            --color-slate-850: #131724;
+            --color-slate-800: #1a2030;
+            --color-slate-700: #2a3449;
+            --color-slate-400: #94a3b8;
+            --color-slate-300: #cbd5e1;
+            --color-slate-100: #f1f5f9;
+            --color-white: #ffffff;
+
+            /* Brand Accents */
+            --color-cyan-400: #22d3ee;
+            --color-cyan-500: #06b6d4;
+            --color-cyan-600: #0891b2;
+            --color-emerald-400: #34d399;
+            --color-emerald-500: #10b981;
+            --color-violet-400: #a78bfa;
+            --color-violet-500: #8b5cf6;
+            --color-amber-400: #fbbf24;
+            --color-amber-500: #f59e0b;
+            --color-rose-500: #f43f5e;
+
+            /* Tier 2: Semantic Tokens (Dark Theme First) */
+            --bg-canvas: var(--color-slate-950);
+            --bg-surface: var(--color-slate-900);
+            --bg-elevated: var(--color-slate-850);
+            --bg-glass: rgba(14, 17, 26, 0.75);
+            --bg-glass-elevated: rgba(26, 32, 48, 0.6);
+
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-active: rgba(6, 182, 212, 0.4);
+            --border-glow: rgba(56, 189, 248, 0.25);
+
+            --text-primary: var(--color-white);
+            --text-secondary: var(--color-slate-300);
+            --text-muted: var(--color-slate-400);
+
+            --accent-primary: var(--color-cyan-400);
+            --accent-finops: var(--color-emerald-400);
+            --accent-arch: var(--color-violet-400);
+            --accent-gold: var(--color-amber-400);
+
+            /* Tier 3: Spacing, Radii & Touch Standards */
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+
+            --touch-target-min: 44px;
+            --nav-height: 72px;
+            --container-max: 1240px;
+            
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
         }
 
-        * {
+        /* Base Resets */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            color-scheme: dark;
+        }
+
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Hacker Grid Background */
-        .bg-grid {
+        /* Selection */
+        ::selection {
+            background: rgba(6, 182, 212, 0.3);
+            color: #ffffff;
+        }
+
+        /* Ambient Background Atmosphere */
+        .ambient-mesh {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: 
-                linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
-                linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-            background-size: 40px 40px;
+            pointer-events: none;
             z-index: -2;
-            transform: perspective(500px) rotateX(60deg) scale(2.5) translateY(-100px);
-            animation: gridMove 20s linear infinite;
+            overflow: hidden;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.07) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
         }
 
-        @keyframes gridMove {
-            0% { transform: perspective(500px) rotateX(60deg) scale(2.5) translateY(0); }
-            100% { transform: perspective(500px) rotateX(60deg) scale(2.5) translateY(40px); }
-        }
-
-        /* Canvas Particle Network */
-        #network-canvas {
+        /* Subtle Geometric Tech Grid (Modern OLED) */
+        .tech-grid-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
+            pointer-events: none;
             z-index: -1;
-            opacity: 0.4;
+            opacity: 0.35;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 30%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 30%, transparent 100%);
         }
 
-        /* Typography */
-        h1, h2, h3, .mono {
-            font-family: 'Fira Code', monospace;
-        }
-
-        .highlight {
-            color: var(--neon-green);
-            text-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
-        }
-
-        .highlight-alt {
-            color: var(--neon-blue);
-            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-        }
-
-        /* Header / Nav */
-        header {
-            padding: 2rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Particle Canvas (Optimized & Pausable) */
+        #particle-canvas {
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 100;
-            background: linear-gradient(to bottom, rgba(3,3,5,0.9), transparent);
-            backdrop-filter: blur(5px);
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.55;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            color: var(--text-main);
-            text-decoration: none;
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.5rem;
         }
-        
-        .logo span { color: var(--neon-green); }
 
-        .nav-links {
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* ==========================================================================
+           2. HEADER & NAVIGATION (Responsive with Mobile Drawer)
+           ========================================================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            z-index: 1000;
+            background: rgba(7, 8, 13, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(7, 8, 13, 0.92);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-wrapper {
+            height: 100%;
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 800;
+            font-size: 1.15rem;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, var(--color-cyan-500), var(--color-violet-500));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+
+        .brand-name {
+            font-family: var(--font-sans);
+        }
+
+        .brand-name span {
+            color: var(--accent-primary);
+        }
+
+        .desktop-nav {
+            display: none;
+            align-items: center;
             gap: 2rem;
         }
 
-        .nav-links a {
+        @media (min-width: 900px) {
+            .desktop-nav {
+                display: flex;
+            }
+        }
+
+        .nav-link {
             color: var(--text-muted);
             text-decoration: none;
-            font-family: 'Fira Code', monospace;
             font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--neon-green);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-top: 80px;
-        }
-
-        .terminal-block {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
-            backdrop-filter: blur(10px);
-            max-width: 800px;
-            margin-bottom: 3rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
             position: relative;
-            overflow: hidden;
+            padding: 0.5rem 0;
         }
 
-        .terminal-block::before {
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-primary);
+        }
+
+        .nav-link.active::after {
             content: '';
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+            height: 2px;
+            background: var(--accent-primary);
+            border-radius: 2px;
+            box-shadow: 0 0 8px var(--accent-primary);
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1rem;
-            line-height: 1.1;
-            font-weight: 900;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -1px;
-        }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        .typewriter {
-            overflow: hidden;
-            border-right: .15em solid var(--neon-green);
-            white-space: nowrap;
-            margin: 0;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        @keyframes typing { from { width: 0 } to { width: 100% } }
-        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--neon-green); } }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-
-        .stat-card {
-            background: rgba(10, 10, 15, 0.4);
-            border-left: 2px solid var(--neon-blue);
-            padding: 1.5rem;
-            backdrop-filter: blur(5px);
-        }
-
-        .stat-num {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-family: 'Fira Code', monospace;
-        }
-
-        /* Projects Section */
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+        .nav-actions {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
-        .section-title::after {
+
+        /* Mobile Hamburger Button */
+        .mobile-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            padding: 0;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .mobile-toggle:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hamburger-line {
+            width: 20px;
+            height: 2px;
+            background-color: var(--text-primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-line + .hamburger-line {
+            margin-top: 5px;
+        }
+
+        .mobile-toggle.active .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .mobile-toggle.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        @media (min-width: 900px) {
+            .mobile-toggle {
+                display: none;
+            }
+        }
+
+        /* Mobile Drawer */
+        .mobile-drawer {
+            position: fixed;
+            top: var(--nav-height);
+            right: 0;
+            width: 100%;
+            max-width: 320px;
+            height: calc(100vh - var(--nav-height));
+            background: rgba(14, 17, 26, 0.98);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid var(--border-subtle);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 999;
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .mobile-drawer.open {
+            transform: translateX(0);
+        }
+
+        .mobile-drawer-overlay {
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            width: 100%;
+            height: calc(100vh - var(--nav-height));
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 998;
+        }
+
+        .mobile-drawer-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.85rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            min-height: 48px;
+        }
+
+        .mobile-nav-link:hover, .mobile-nav-link.active {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--accent-primary);
+        }
+
+        /* ==========================================================================
+           3. BUTTON PRIMITIVES & BADGES
+           ========================================================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            white-space: nowrap;
+            min-height: var(--touch-target-min);
+            padding: 0.65rem 1.4rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #06b6d4, #0284c7);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 25px rgba(6, 182, 212, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .btn-sm {
+            padding: 0.45rem 0.95rem;
+            font-size: 0.82rem;
+            min-height: 38px;
+        }
+
+        .btn-lg {
+            padding: 0.85rem 1.85rem;
+            font-size: 0.98rem;
+            min-height: 48px;
+        }
+
+        /* Status Beacon Pill */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.35rem 0.85rem;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: var(--radius-full);
+            color: var(--color-emerald-400);
+            font-size: 0.82rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--color-emerald-400);
+            box-shadow: 0 0 10px var(--color-emerald-400);
+            position: relative;
+        }
+
+        .status-dot::after {
             content: '';
-            height: 1px;
-            flex: 1;
-            background: linear-gradient(90deg, var(--border), transparent);
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            border: 1px solid var(--color-emerald-400);
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 1; }
+            100% { transform: scale(2.2); opacity: 0; }
+        }
+
+        /* ==========================================================================
+           4. HERO SECTION
+           ========================================================================== */
+        .hero-section {
+            padding-top: calc(var(--nav-height) + 3rem);
+            padding-bottom: 5rem;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .hero-section {
+                padding-top: calc(var(--nav-height) + 4.5rem);
+                padding-bottom: 7rem;
+            }
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: clamp(2.3rem, 5.2vw, 4.2rem);
+            font-weight: 900;
+            letter-spacing: -0.035em;
+            line-height: 1.08;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-purple {
+            background: linear-gradient(135deg, var(--color-cyan-400), var(--color-violet-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-lead {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            line-height: 1.65;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-lead strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        /* Ecosystem Certifications Strip */
+        .ecosystem-strip {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ecosystem-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .ecosystem-chip:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-1px);
+        }
+
+        /* ==========================================================================
+           5. METRICS BENTO GRID (Hero Impact)
+           ========================================================================== */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 900px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.25rem;
+            }
+        }
+
+        .metric-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--border-glow), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .metric-card:hover {
+            border-color: rgba(255, 255, 255, 0.18);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .metric-card:hover::before {
+            opacity: 1;
+        }
+
+        .metric-value {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 900;
+            font-family: var(--font-sans);
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.35rem;
+        }
+
+        .metric-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* ==========================================================================
+           6. SECTION STYLING & HEADINGS
+           ========================================================================== */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                padding: 7rem 0;
+            }
+        }
+
+        .section-header {
+            max-width: 720px;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-tag {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ==========================================================================
+           7. CORE ARCHITECTURAL TENETS (Bento Grid)
+           ========================================================================== */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .bento-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .bento-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .bento-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .bento-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .bento-text {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* ==========================================================================
+           8. INTERACTIVE ARCHITECTURE TOPOLOGY VISUALIZER
+           ========================================================================== */
+        .topology-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .topology-container {
+                padding: 3rem;
+            }
+        }
+
+        .topology-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .topology-flow {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        @media (min-width: 900px) {
+            .topology-flow {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .topology-node {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .topology-node:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .node-step {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .node-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .node-desc {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ==========================================================================
+           9. ENTERPRISE CASE STUDIES (Deep Impact)
+           ========================================================================== */
+        .case-study-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .case-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem 1.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .case-card {
+                padding: 3.5rem 3rem;
+            }
+        }
+
+        .case-card:hover {
+            border-color: rgba(255, 255, 255, 0.16);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .case-tag {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-cyan-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        .case-title {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            line-height: 1.25;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 850px) {
+            .case-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .case-col h4 {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .case-col p, .case-col ul {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .case-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .case-col li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .case-col li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-emerald-400);
+            font-weight: 700;
+        }
+
+        /* ==========================================================================
+           10. FEATURED OPEN SOURCE SYSTEMS (Projects)
+           ========================================================================== */
+        .projects-filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            scrollbar-width: none;
+        }
+
+        .projects-filter-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-full);
+            color: var(--text-muted);
+            padding: 0.55rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            min-height: 40px;
+        }
+
+        .filter-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .filter-btn.active {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
 
-        .project-card {
-            background: var(--surface);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 2.5rem;
-            transition: all 0.4s ease;
-            position: relative;
-            backdrop-filter: blur(10px);
-            group: hover;
-        }
-
-        .project-card:hover {
-            border-color: var(--neon-purple);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(176, 38, 255, 0.15);
-        }
-
-        .project-type {
-            font-size: 0.8rem;
-            color: var(--neon-blue);
-            font-family: 'Fira Code', monospace;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .project-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .project-card p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .tech-tag {
-            font-size: 0.75rem;
-            padding: 0.3rem 0.8rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 4px;
-            font-family: 'Fira Code', monospace;
-            color: var(--text-main);
-        }
-
-        .project-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-family: 'Fira Code', monospace;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .project-links a:hover {
-            color: var(--neon-green);
-        }
-
-        /* Tabs UI */
-        .tab-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            padding: 1rem 2rem;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.9rem;
-            cursor: pointer;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-
-        .tab-btn:hover {
-            color: var(--text-main);
-            background: rgba(255,255,255,0.02);
-        }
-
-        .tab-btn.active {
-            color: var(--neon-blue);
-            border-bottom: 2px solid var(--neon-blue);
-            background: rgba(0, 240, 255, 0.05);
-        }
-
-        /* CTA Buttons */
-        .btn {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.65rem;
-            padding: 0.9rem 1.9rem;
-            border-radius: 6px;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.82rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            text-decoration: none;
-            white-space: nowrap;
-            cursor: pointer;
-            border: 1px solid var(--neon-green);
-            background: transparent;
-            color: var(--neon-green);
-            overflow: hidden;
-            transition: color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--neon-green);
-            transform: scaleX(0);
-            transform-origin: left center;
-            transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-            z-index: 0;
-        }
-
-        .btn > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn:hover {
-            color: #030305;
-            box-shadow: 0 0 24px rgba(0, 255, 65, 0.45), 0 0 60px rgba(0, 255, 65, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .btn:hover::before {
-            transform: scaleX(1);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn:focus-visible {
-            outline: 2px solid var(--neon-green);
-            outline-offset: 3px;
-        }
-
-        .btn .btn-icon {
-            display: inline-flex;
-            align-items: center;
-            transition: transform 0.35s ease;
-        }
-
-        .btn:hover .btn-icon {
-            transform: translateX(4px);
-        }
-
-        .btn-secondary {
-            border-color: var(--neon-blue);
-            color: var(--neon-blue);
-        }
-
-        .btn-secondary::before {
-            background: var(--neon-blue);
-        }
-
-        .btn-secondary:hover {
-            color: #030305;
-            box-shadow: 0 0 24px rgba(0, 240, 255, 0.45), 0 0 60px rgba(0, 240, 255, 0.15);
-        }
-
-        .btn-secondary .btn-icon {
-            transform: rotate(-45deg);
-        }
-
-        .btn-secondary:hover .btn-icon {
-            transform: rotate(-45deg) translateX(4px);
-        }
-
-        @media (max-width: 640px) {
-            .btn {
-                padding: 0.8rem 1.4rem;
-                font-size: 0.74rem;
-                letter-spacing: 0.05em;
-                gap: 0.5rem;
-                flex: 1 1 100%;
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        /* Footer */
-        footer {
-            padding: 4rem 0;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: 8rem;
-            text-align: center;
+        .project-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .project-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-top {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-badge {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-cyan-400);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .project-heading {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.85rem;
+            line-height: 1.3;
+        }
+
+        .project-summary {
+            font-size: 0.92rem;
             color: var(--text-muted);
-            font-family: 'Fira Code', monospace;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .tech-pill {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.65rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+        }
+
+        .project-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .project-link-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .project-link-item:hover {
+            color: #ffffff;
+        }
+
+        /* ==========================================================================
+           11. TECHNICAL ARSENAL (Categorized Tab System)
+           ========================================================================== */
+        .arsenal-tabs-wrapper {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+        }
+
+        .arsenal-tab-bar {
+            display: flex;
+            overflow-x: auto;
+            border-bottom: 1px solid var(--border-subtle);
+            background: rgba(0, 0, 0, 0.2);
+            scrollbar-width: none;
+        }
+
+        .arsenal-tab-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .arsenal-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 1.2rem 1.8rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: var(--font-sans);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            min-height: 52px;
+        }
+
+        .arsenal-tab-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .arsenal-tab-btn.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+            background: rgba(6, 182, 212, 0.05);
+        }
+
+        .arsenal-tab-content {
+            padding: 2.5rem 1.75rem;
+        }
+
+        @media (min-width: 768px) {
+            .arsenal-tab-content {
+                padding: 3rem 2.5rem;
+            }
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .arsenal-subheading {
+            font-family: var(--font-mono);
             font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-cyan-400);
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.05em;
+        }
+
+        .arsenal-chips-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .arsenal-skill-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.9rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .arsenal-skill-chip:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .skill-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--color-cyan-400);
+        }
+
+        /* ==========================================================================
+           12. EXECUTIVE CTA & CONTACT
+           ========================================================================== */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: var(--radius-xl);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .cta-banner {
+                padding: 5rem 3rem;
+            }
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 3.8vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        /* ==========================================================================
+           13. FOOTER
+           ========================================================================== */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 3.5rem 0;
+            background: rgba(7, 8, 13, 0.95);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer-legal {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--color-emerald-400);
+            background: rgba(16, 185, 129, 0.08);
+            padding: 0.35rem 0.85rem;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--color-emerald-400);
+            color: #ffffff;
+            padding: 0.85rem 1.4rem;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            z-index: 2000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Accessibility: Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            #particle-canvas {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-grid"></div>
-    <canvas id="network-canvas"></canvas>
+    <!-- Ambient Mesh & Background Grid -->
+    <div class="ambient-mesh" aria-hidden="true"></div>
+    <div class="tech-grid-bg" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
-    <header>
-        <div class="container" style="display: flex; justify-content: space-between; width: 100%;">
-            <a href="#" class="logo">PRIYA<span>_</span>RANJAN</a>
-            <div class="nav-links">
-                <a href="#about">// about</a>
-                <a href="#tenets">// tenets</a>
-                <a href="#projects">// architecture</a>
-                <a href="#impact">// impact</a>
-                <a href="#arsenal">// arsenal</a>
-                <a href="https://github.com/priyaranjan-sahu" target="_blank">// github</a>
+    <!-- Header Navigation -->
+    <header id="site-header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" aria-label="Priya Ranjan Sahu Homepage">
+                    <div class="brand-avatar">PS</div>
+                    <div class="brand-name">PRIYA<span>_</span>RANJAN</div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="desktop-nav" aria-label="Main Navigation">
+                    <a href="#about" class="nav-link active">About</a>
+                    <a href="#tenets" class="nav-link">Tenets</a>
+                    <a href="#architecture" class="nav-link">Architecture</a>
+                    <a href="#impact" class="nav-link">Impact</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#arsenal" class="nav-link">Arsenal</a>
+                </nav>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <a href="https://github.com/priyaranjan-sahu" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="GitHub Profile">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 4.9 3.17 9.06 7.57 10.53.55.1.75-.24.75-.54v-1.9c-3.08.67-3.73-1.48-3.73-1.48-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.68.08-.68 1.11.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.7-1.49-2.46-.28-5.05-1.23-5.05-5.5 0-1.21.43-2.2 1.14-2.98-.11-.28-.5-1.41.11-2.94 0 0 .93-.3 3.05 1.14a10.5 10.5 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.22 2.66.11 2.94.71.78 1.14 1.77 1.14 2.98 0 4.28-2.6 5.22-5.07 5.49.4.35.76 1.03.76 2.09v3.1c0 .3.2.65.76.54a11.12 11.12 0 0 0 7.56-10.53C23.1 5.34 18.27.5 12 .5Z"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                    <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="container">
+    <!-- Mobile Drawer Overlay & Drawer -->
+    <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+    <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+        <div class="mobile-nav-links">
+            <a href="#about" class="mobile-nav-link" onclick="closeDrawer()">About <span>→</span></a>
+            <a href="#tenets" class="mobile-nav-link" onclick="closeDrawer()">Tenets <span>→</span></a>
+            <a href="#architecture" class="mobile-nav-link" onclick="closeDrawer()">Architecture <span>→</span></a>
+            <a href="#impact" class="mobile-nav-link" onclick="closeDrawer()">Enterprise Impact <span>→</span></a>
+            <a href="#projects" class="mobile-nav-link" onclick="closeDrawer()">Open Source <span>→</span></a>
+            <a href="#arsenal" class="mobile-nav-link" onclick="closeDrawer()">Technical Arsenal <span>→</span></a>
+        </div>
+        <div style="padding-top: 2rem; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 0.75rem;">
+            <a href="#contact" class="btn btn-primary" onclick="closeDrawer()">Get in Touch</a>
+            <a href="https://github.com/priyaranjan-sahu" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile</a>
+        </div>
+    </aside>
+
+    <main id="main-content">
         
-        <section class="hero" id="about">
-            <div class="terminal-block gs-reveal">
-                <p class="mono" style="color: var(--text-muted); margin-bottom: 1rem;">> whoami</p>
-                <div class="typewriter mono highlight" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                    Multi-Cloud Architect | DevOps | SRE
-                </div>
-                <h1>Architecting <br><span class="highlight-alt">Global Scale.</span></h1>
-                <p class="subtitle">
-                    Around 17 years building production systems across GCP, AWS, Azure, OCI, and Alibaba. 
-                     I help enterprises cut cloud spend by 30%+ and reduce MTTR by 60%—without sacrificing reliability.
-                </p>
-                
-                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-                    <span class="tech-tag" style="border: 1px solid var(--neon-green); color: var(--neon-green);">GCP Arch</span>
-                    <span class="tech-tag" style="border: 1px solid var(--neon-blue); color: var(--neon-blue);">AWS Solutions</span>
-                    <span class="tech-tag" style="border: 1px solid var(--neon-purple); color: var(--neon-purple);">Azure Sec</span>
-                </div>
-            </div>
-
-            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-bottom: 2rem;">
-                <div class="stat-card gs-reveal">
-                    <div class="stat-num">10M+</div>
-                    <div class="stat-label">Monthly Users</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: var(--neon-blue);">
-                    <div class="stat-num">2000+</div>
-                    <div class="stat-label">GKE Clusters</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #10b981;">
-                    <div class="stat-num">60%</div>
-                    <div class="stat-label">MTTR Reduction</div>
-                </div>
-                <div class="stat-card gs-reveal" style="border-color: #fbbf24;">
-                    <div class="stat-num">30%</div>
-                    <div class="stat-label">Cloud Cost Reduced</div>
-                </div>
-            </div>
-
-            <!-- Secondary Stats as sleek pill badges -->
-            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 3rem;" class="gs-reveal">
-                <span style="border: 1px solid var(--neon-green); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: var(--neon-green);">600+ Terraform Modules</span>
-                <span style="border: 1px solid var(--neon-purple); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: var(--neon-purple);">3× GCP Certifications</span>
-                <span style="border: 1px solid #f43f5e; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #f43f5e;">2000+ Linux Servers</span>
-                <span style="border: 1px solid #3b82f6; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #3b82f6;">1000+ Windows Servers</span>
-                <span style="border: 1px solid #06b6d4; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #06b6d4;">100+ Azure Resources</span>
-                <span style="border: 1px solid #f97316; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #f97316;">AWS Solutions Architecture</span>
-                <span style="border: 1px solid #0284c7; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #0284c7;">CloudBlue Enterprise</span>
-                <span style="border: 1px solid #2563eb; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #2563eb;">Ingram Micro Platforms</span>
-                <span style="border: 1px solid #f43f5e; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #f43f5e;">Alibaba Cloud</span>
-                <span style="border: 1px solid #ef4444; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #ef4444;">Global Migrations</span>
-                <span style="border: 1px solid #a855f7; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #a855f7;">50+ Engineers Mentored</span>
-            </div>
-
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;" class="gs-reveal">
-                <a href="#impact" class="btn">
-                    <span>View Enterprise Impact</span>
-                    <span class="btn-icon" aria-hidden="true">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </span>
-                </a>
-                <a href="https://github.com/priyaranjan-sahu" target="_blank" rel="noopener" class="btn btn-secondary">
-                    <span class="btn-icon" aria-hidden="true">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 4.9 3.17 9.06 7.57 10.53.55.1.75-.24.75-.54v-1.9c-3.08.67-3.73-1.48-3.73-1.48-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.68.08-.68 1.11.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.7-1.49-2.46-.28-5.05-1.23-5.05-5.5 0-1.21.43-2.2 1.14-2.98-.11-.28-.5-1.41.11-2.94 0 0 .93-.3 3.05 1.14a10.5 10.5 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.22 2.66.11 2.94.71.78 1.14 1.77 1.14 2.98 0 4.28-2.6 5.22-5.07 5.49.4.35.76 1.03.76 2.09v3.1c0 .3.2.65.76.54a11.12 11.12 0 0 0 7.56-10.53C23.1 5.34 18.27.5 12 .5Z"/></svg>
-                    </span>
-                    <span>GitHub Profile</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- NEW SECTION: Core Tenets -->
-        <section id="tenets" style="padding: 4rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">01.</span> Core Architectural Tenets</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card gs-reveal" style="border-top: 3px solid var(--neon-blue);">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--neon-blue);">Platform as a Product</h3>
-                    <p style="color: var(--text-muted); line-height: 1.6;">I treat infrastructure as an internal product. By abstracting complexity into self-service, GitOps-driven pipelines, I drastically reduce cognitive load for engineering teams and accelerate feature delivery from weeks to hours.</p>
-                </div>
-                
-                <div class="project-card gs-reveal" style="border-top: 3px solid var(--neon-green);">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--neon-green);">FinOps-Driven Scale</h3>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Architecting for scale isn't just about handling traffic; it's about unit economics. I build auto-scaling, spot-instance orchestrated environments that drive down cost-per-compute while maintaining strict SLAs.</p>
-                </div>
-                
-                <div class="project-card gs-reveal" style="border-top: 3px solid var(--neon-purple);">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--neon-purple);">Zero-Trust & Policy as Code</h3>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Security cannot be an afterthought. I enforce strict OPA/Gatekeeper policies, CIS benchmarks, and identity-aware proxies directly at the infrastructure layer to guarantee compliance by default.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" style="padding: 4rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">02.</span> Open Source Architecture</h2>
-            
-            <div class="projects-grid">
-                
-                <!-- Project 1 -->
-                <div class="project-card gs-reveal">
-                    <span class="project-type">ENTERPRISE INFRASTRUCTURE</span>
-                    <h3>Multi-Cloud FinOps (Community Edition)</h3>
-                    <p>An enterprise-grade cost optimization engine for AWS, GCP & Azure. Features advanced anomaly detection, 5-vector workload rightsizing, and automated KEDA scaling based on FOCUS 1.0 specifications.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python (FastAPI)</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Prometheus</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/priyaranjan-sahu/multi-cloud-finops" target="_blank">View Repository →</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card gs-reveal">
-                    <span class="project-type">SYSTEMS ENGINEERING</span>
-                    <h3>Vexil Search</h3>
-                    <p>A blazing fast, native desktop and mobile application that acts as an AI search engine for your local files. Built entirely on a Rust engine for 0-latency indexing and zero cloud data leaks.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">Tauri 2</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Android</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://priyaranjan-sahu.github.io/vexil-search/" target="_blank">View Live Demo →</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card gs-reveal">
-                    <span class="project-type">AUTOMATION PLAYBOOKS</span>
-                    <h3>Cloud Auto-Scripts</h3>
-                    <p>A massive, open-source library of highly refined Bash, Python, and PowerShell automation scripts used to harden, deploy, and audit complex multi-cloud topologies across global data centers.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Bash</span>
-                        <span class="tech-tag">PowerShell</span>
-                        <span class="tech-tag">AWS CLI</span>
-                        <span class="tech-tag">GCloud</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/priyaranjan-sahu/multi-cloud-automation-scripts" target="_blank">View Scripts →</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- NEW SECTION: Enterprise Impact Case Studies -->
-        <section id="impact" style="padding: 4rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">03.</span> Enterprise Impact & Case Studies</h2>
-            
-            <div style="display: flex; flex-direction: column; gap: 2rem;">
-                <!-- Case Study 1 -->
-                <div class="project-card gs-reveal" style="padding: 3rem;">
-                    <span class="project-type" style="color: #f97316;">LARGE-SCALE TRANSFORMATION</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Global Hybrid-Cloud Migration & FinOps Optimization</h3>
-                    
-                    <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--neon-blue); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> CONTEXT_&_PROBLEM</h4>
-                        <p style="color: var(--text-muted); line-height: 1.6;">Legacy on-premise data warehouses and monolithic applications were causing severe deployment bottlenecks, dropping critical SLAs, and generating excessive unoptimized annual infrastructure spend.</p>
-                    </div>
-
-                    <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--neon-green); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> ARCHITECTURAL_SOLUTION</h4>
-                        <p style="color: var(--text-muted); line-height: 1.6;">Designed a resilient hybrid topology bridging on-premise mainframes with GCP BigQuery and AKS/EKS containerized microservices. Implemented modular Terraform IaC and ArgoCD for immutable, zero-touch GitOps deployments across multiple global regions.</p>
-                    </div>
-
+        <!-- Hero Section -->
+        <section class="hero-section" id="about">
+            <div class="container">
+                <div class="hero-grid">
                     <div>
-                        <h4 style="color: var(--neon-purple); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> BUSINESS_IMPACT</h4>
-                        <ul style="color: var(--text-muted); line-height: 1.6; padding-left: 1.5rem;">
-                            <li>Achieved <strong>99.99% availability</strong> during peak traffic by eliminating single points of failure.</li>
-                            <li>Reduced Mean Time To Recovery (MTTR) by <strong>60%</strong> through automated self-healing.</li>
-                            <li>Shrank recurring cloud spend by <strong>30%+</strong> via FinOps lifecycle management (Rightsizing, Spot-orchestration, and committed use discounts).</li>
-                        </ul>
+                        <!-- Availability Badge -->
+                        <div class="status-pill">
+                            <span class="status-dot"></span>
+                            <span>Principal Multi-Cloud Architect & FinOps Leader</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Architecting <br>
+                            <span class="text-gradient">Multi-Cloud Scale.</span><br>
+                            <span class="text-gradient-purple">Engineered for Reliability.</span>
+                        </h1>
+
+                        <p class="hero-lead">
+                            <strong>17+ years</strong> designing and operating resilient, enterprise-grade cloud ecosystems across 
+                            <strong>GCP, AWS, Azure, OCI, and Alibaba</strong>. Specializing in high-throughput Kubernetes orchestration, 
+                            zero-trust GitOps, and FinOps unit economics that reduce annual cloud spend by <strong>30%+</strong>.
+                        </p>
+
+                        <!-- Call to Actions -->
+                        <div class="hero-actions">
+                            <a href="#impact" class="btn btn-primary btn-lg">
+                                <span>Explore Enterprise Impact</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary btn-lg">
+                                <span>Initiate Discussion</span>
+                            </a>
+                        </div>
+
+                        <!-- Multi-Cloud Ecosystem Pills -->
+                        <div class="ecosystem-strip">
+                            <span class="ecosystem-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                                3× GCP Professional
+                            </span>
+                            <span class="ecosystem-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                2000+ GKE Clusters
+                            </span>
+                            <span class="ecosystem-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                600+ Terraform Modules
+                            </span>
+                            <span class="ecosystem-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+                                FOCUS 1.0 FinOps
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Case Study 2 -->
-                <div class="project-card gs-reveal" style="padding: 3rem;">
-                    <span class="project-type" style="color: #10b981;">LEADERSHIP & OBSERVABILITY</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Establishing a Multi-Cloud SRE Center of Excellence</h3>
+                <!-- Executive Metrics Bento Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value text-gradient">10M+</div>
+                        <div class="metric-label">Monthly Active Users</div>
+                        <div class="metric-desc">High-concurrency global infrastructure serving multi-region consumer traffic.</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" style="color: var(--color-cyan-400);">2,000+</div>
+                        <div class="metric-label">GKE & Cloud Clusters</div>
+                        <div class="metric-desc">Autonomous Kubernetes clusters orchestrated with zero-touch GitOps.</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" style="color: var(--color-emerald-400);">30%+</div>
+                        <div class="metric-label">Cloud Spend Optimized</div>
+                        <div class="metric-desc">Millions saved annually via 5-vector rightsizing and spot-instance orchestration.</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" style="color: var(--color-violet-400);">60%</div>
+                        <div class="metric-label">MTTR Incident Reduction</div>
+                        <div class="metric-desc">Automated self-healing topologies and centralized OpenTelemetry stacks.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architectural Tenets (Bento Grid) -->
+        <section class="section" id="tenets" style="border-top: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 01. PHILOSOPHY</span>
+                    <h2 class="section-title">Core Architectural Tenets</h2>
+                    <p class="section-subtitle">
+                        Foundational design principles applied to every mission-critical platform engineered over the last 17 years.
+                    </p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-card">
+                        <div>
+                            <div class="bento-icon-box" style="color: var(--color-cyan-400);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                            </div>
+                            <h3 class="bento-title">Platform as a Product</h3>
+                            <p class="bento-text">
+                                Infrastructure is treated as an internal product. By abstracting complexity into self-service, 
+                                GitOps-driven pipelines, engineering cognitive load is minimized and feature delivery accelerates from weeks to hours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card">
+                        <div>
+                            <div class="bento-icon-box" style="color: var(--color-emerald-400);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <h3 class="bento-title">FinOps-Driven Scale</h3>
+                            <p class="bento-text">
+                                Scale without unit economics is technical debt. Every architecture integrates real-time spend anomaly detection, 
+                                dynamic KEDA autoscaling, and FOCUS 1.0 cost attribution down to individual microservice workloads.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card">
+                        <div>
+                            <div class="bento-icon-box" style="color: var(--color-violet-400);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <h3 class="bento-title">Zero-Trust by Default</h3>
+                            <p class="bento-text">
+                                Security is enforced as code at the infrastructure boundary. Enforcing strict OPA/Gatekeeper admission policies, 
+                                CIS benchmarks, mutual TLS, and secret-less IAM federation guarantees audit compliance by default.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture Visualizer -->
+        <section class="section" id="architecture" style="background: rgba(14, 17, 26, 0.4); border-top: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 02. SYSTEM DESIGN</span>
+                    <h2 class="section-title">Enterprise FinOps & GitOps Topology</h2>
+                    <p class="section-subtitle">
+                        An end-to-end architecture blueprint illustrating real-time multi-cloud cost optimization and zero-touch workload scaling.
+                    </p>
+                </div>
+
+                <div class="topology-container">
+                    <div class="topology-header">
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #fff;">Autonomous Multi-Cloud Controller</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-muted);">FOCUS 1.0 Ingestion Pipeline → Continuous Optimization Loop</p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <span class="ecosystem-chip" style="background: rgba(6, 182, 212, 0.1); color: var(--color-cyan-400); border-color: rgba(6, 182, 212, 0.3);">Real-Time Stream</span>
+                            <span class="ecosystem-chip" style="background: rgba(16, 185, 129, 0.1); color: var(--color-emerald-400); border-color: rgba(16, 185, 129, 0.3);">Sub-Second Feedback</span>
+                        </div>
+                    </div>
+
+                    <div class="topology-flow">
+                        <div class="topology-node">
+                            <div class="node-step">PHASE 01: INGESTION</div>
+                            <div class="node-title">Multi-Cloud Telemetry</div>
+                            <div class="node-desc">Continuous metric streaming from AWS Cost Explorer, GCP Cloud Billing, and Azure Cost APIs normalized to FOCUS 1.0 schema.</div>
+                        </div>
+
+                        <div class="topology-node">
+                            <div class="node-step">PHASE 02: INFERENCE</div>
+                            <div class="node-title">Anomaly Engine</div>
+                            <div class="node-desc">Statistical z-score outlier detection identifying runaway spend spikes within 15 minutes of occurrence across global accounts.</div>
+                        </div>
+
+                        <div class="topology-node">
+                            <div class="node-step">PHASE 03: DECISION</div>
+                            <div class="node-title">5-Vector Rightsizer</div>
+                            <div class="node-desc">Calculates optimal CPU, RAM, IOPS, Network, and GPU allocations matching actual P99 workload demand without throttling.</div>
+                        </div>
+
+                        <div class="topology-node">
+                            <div class="node-step">PHASE 04: EXECUTION</div>
+                            <div class="node-title">KEDA & GitOps</div>
+                            <div class="node-desc">ArgoCD synchronizes declarative manifests to 2,000+ GKE/EKS clusters, automatically adjusting node pools and Spot instance ratios.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enterprise Impact & Case Studies -->
+        <section class="section" id="impact" style="border-top: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 03. TRACK RECORD</span>
+                    <h2 class="section-title">Enterprise Impact & Case Studies</h2>
+                    <p class="section-subtitle">
+                        Quantified transformations delivered across global enterprises, hybrid data centers, and Fortune 500 platform migrations.
+                    </p>
+                </div>
+
+                <div class="case-study-list">
+                    <!-- Case Study 1 -->
+                    <article class="case-card">
+                        <span class="case-tag">TRANSFORMATION & CLOUD FINOPS</span>
+                        <h3 class="case-title">Global Hybrid-Cloud Migration & FinOps Optimization</h3>
+
+                        <div class="case-grid">
+                            <div class="case-col">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    CHALLENGE
+                                </h4>
+                                <p>Legacy on-premise data warehouses and monolithic applications were causing severe deployment bottlenecks, dropping critical consumer SLAs, and generating excessive unoptimized annual infrastructure spend.</p>
+                            </div>
+
+                            <div class="case-col">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    SOLUTION
+                                </h4>
+                                <p>Architected a resilient hybrid topology bridging legacy mainframes with GCP BigQuery and AKS/EKS containerized microservices. Implemented modular Terraform IaC and ArgoCD for immutable, zero-touch GitOps deployments across 4 global regions.</p>
+                            </div>
+
+                            <div class="case-col">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    BUSINESS IMPACT
+                                </h4>
+                                <ul>
+                                    <li><strong>99.99% Availability</strong> achieved during peak traffic surges.</li>
+                                    <li><strong>60% MTTR Reduction</strong> via automated self-healing clusters.</li>
+                                    <li><strong>30%+ Cloud Cost Saved</strong> via automated FinOps lifecycle management and Spot-orchestration.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Case Study 2 -->
+                    <article class="case-card">
+                        <span class="case-tag" style="color: var(--color-emerald-400);">LEADERSHIP & OBSERVABILITY</span>
+                        <h3 class="case-title">Multi-Cloud SRE Center of Excellence & Telemetry Unification</h3>
+
+                        <div class="case-grid">
+                            <div class="case-col">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    CHALLENGE
+                                </h4>
+                                <p>Engineering teams spanning multiple business units were operating in silos with fragmented monitoring, leading to alert fatigue, unmonitored shadow IT, and recurring missed Service Level Objectives.</p>
+                            </div>
+
+                            <div class="case-col">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    SOLUTION
+                                </h4>
+                                <p>Standardized a centralized observability mesh (OpenTelemetry, Prometheus, Datadog) spanning AWS, Azure, and GCP. Defined enterprise-wide SLIs/SLOs, established automated error budget enforcement policies, and codified incident runbooks.</p>
+                            </div>
+
+                            <div class="case-col">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    BUSINESS IMPACT
+                                </h4>
+                                <ul>
+                                    <li>Unified operational telemetry across <strong>3 continents</strong> for C-level dashboards.</li>
+                                    <li>P1 incident resolution time cut from hours to <strong>under 15 minutes</strong>.</li>
+                                    <li>Directly coached and upskilled <strong>50+ senior engineers and 10+ managers</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source Architecture & Projects -->
+        <section class="section" id="projects" style="background: rgba(14, 17, 26, 0.4); border-top: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 04. CODE & REPOSITORIES</span>
+                    <h2 class="section-title">Open Source Infrastructure</h2>
+                    <p class="section-subtitle">
+                        Production tools, automation libraries, and enterprise architectures built for the global engineering community.
+                    </p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="projects-filter-bar" role="tablist" aria-label="Project Categories">
+                    <button class="filter-btn active" onclick="filterProjects('all', this)" role="tab" aria-selected="true">All Systems</button>
+                    <button class="filter-btn" onclick="filterProjects('finops', this)" role="tab" aria-selected="false">FinOps & Cost</button>
+                    <button class="filter-btn" onclick="filterProjects('systems', this)" role="tab" aria-selected="false">Systems & Rust</button>
+                    <button class="filter-btn" onclick="filterProjects('automation', this)" role="tab" aria-selected="false">Automation & Security</button>
+                </div>
+
+                <div class="projects-grid" id="projects-container">
                     
-                    <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--neon-blue); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> CONTEXT_&_PROBLEM</h4>
-                        <p style="color: var(--text-muted); line-height: 1.6;">Engineering teams spanning multiple product lines were operating in silos with fragmented monitoring, leading to alert fatigue, shadow IT, and missed Service Level Objectives (SLOs).</p>
+                    <!-- Project 1: Multi-Cloud FinOps -->
+                    <div class="project-card" data-category="finops">
+                        <div class="project-top">
+                            <span class="project-badge">ENTERPRISE FINOPS ENGINE</span>
+                            <h3 class="project-heading">multi-cloud-finops</h3>
+                            <p class="project-summary">
+                                Enterprise-grade cost optimization engine for AWS, GCP & Azure. Features real-time spend anomaly detection, 
+                                5-vector workload rightsizing, and automated KEDA scaling adhering to FOCUS 1.0 specifications.
+                            </p>
+                            <div class="tech-pill-group">
+                                <span class="tech-pill">Python (FastAPI)</span>
+                                <span class="tech-pill">Terraform</span>
+                                <span class="tech-pill">Kubernetes</span>
+                                <span class="tech-pill">Prometheus</span>
+                                <span class="tech-pill">FOCUS 1.0</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/priyaranjan-sahu/multi-cloud-finops" target="_blank" rel="noopener noreferrer" class="project-link-item">
+                                <span>Source Code</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--neon-green); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> ARCHITECTURAL_SOLUTION</h4>
-                        <p style="color: var(--text-muted); line-height: 1.6;">Architected and deployed a centralized observability stack (OpenTelemetry, Prometheus, Datadog) spanning AWS, Azure, and GCP. Drafted cross-organization SLIs/SLOs, established strict error budget policies, and automated incident response runbooks.</p>
+                    <!-- Project 2: Vexil Search -->
+                    <div class="project-card" data-category="systems">
+                        <div class="project-top">
+                            <span class="project-badge">SYSTEMS & DESKTOP AI</span>
+                            <h3 class="project-heading">Vexil Search</h3>
+                            <p class="project-summary">
+                                High-performance native desktop and mobile AI search engine for your local files. 
+                                Built entirely on a Rust engine for sub-millisecond local indexing, zero cloud data leaks, and full offline privacy.
+                            </p>
+                            <div class="tech-pill-group">
+                                <span class="tech-pill">Rust</span>
+                                <span class="tech-pill">Tauri 2</span>
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">Native Desktop</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://priyaranjan-sahu.github.io/vexil-search/" target="_blank" rel="noopener noreferrer" class="project-link-item">
+                                <span>Live Website</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                            <a href="https://github.com/priyaranjan-sahu/vexil-search" target="_blank" rel="noopener noreferrer" class="project-link-item" style="color: var(--text-muted);">
+                                <span>GitHub</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <div>
-                        <h4 style="color: var(--neon-purple); margin-bottom: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem;">> BUSINESS_IMPACT</h4>
-                        <ul style="color: var(--text-muted); line-height: 1.6; padding-left: 1.5rem;">
-                            <li>Unified telemetry across 3 continents, providing C-level executives with real-time operational dashboards.</li>
-                            <li>Reduced P1 incident resolution time from hours to <strong>under 15 minutes</strong>.</li>
-                            <li>Fostered a culture of engineering excellence by directly mentoring and upskilling <strong>50+ engineers and 10+ managers</strong>.</li>
-                        </ul>
+                    <!-- Project 3: Automation Scripts -->
+                    <div class="project-card" data-category="automation">
+                        <div class="project-top">
+                            <span class="project-badge">STORAGE SECURITY & COMPLIANCE</span>
+                            <h3 class="project-heading">multi-cloud-automation-scripts</h3>
+                            <p class="project-summary">
+                                Read-only storage security audit and hardening playbooks for Azure, AWS, and GCP. 
+                                Performs automated checks for public exposure, encryption-at-rest validation, and compliance verification.
+                            </p>
+                            <div class="tech-pill-group">
+                                <span class="tech-pill">Bash</span>
+                                <span class="tech-pill">PowerShell</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">KQL</span>
+                                <span class="tech-pill">GitHub Actions</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/priyaranjan-sahu/multi-cloud-automation-scripts" target="_blank" rel="noopener noreferrer" class="project-link-item">
+                                <span>View Playbooks</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Enterprise DevOps Portfolio -->
+                    <div class="project-card" data-category="automation">
+                        <div class="project-top">
+                            <span class="project-badge">REFERENCE ARCHITECTURES</span>
+                            <h3 class="project-heading">multi-cloud-devops-portfolio</h3>
+                            <p class="project-summary">
+                                5 battle-tested enterprise reference implementations: Multi-Cloud IaC (Terraform/Ansible), Kubernetes GitOps (ArgoCD/Helm/OPA), 
+                                CI/CD Pipelines, Cloud Security GuardDuty enforcement, and Lambda FinOps.
+                            </p>
+                            <div class="tech-pill-group">
+                                <span class="tech-pill">Terraform</span>
+                                <span class="tech-pill">ArgoCD</span>
+                                <span class="tech-pill">Helm</span>
+                                <span class="tech-pill">OPA/Gatekeeper</span>
+                                <span class="tech-pill">Ansible</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/priyaranjan-sahu/multi-cloud-devops-portfolio" target="_blank" rel="noopener noreferrer" class="project-link-item">
+                                <span>Explore Architectures</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Arsenal (Categorized Tab System) -->
+        <section class="section" id="arsenal" style="border-top: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 05. SKILLS MATRIX</span>
+                    <h2 class="section-title">Technical Arsenal</h2>
+                    <p class="section-subtitle">
+                        Comprehensive expertise spanning cloud providers, container orchestration, telemetry, and automated security.
+                    </p>
+                </div>
+
+                <div class="arsenal-tabs-wrapper">
+                    <!-- Tab Navigation Bar -->
+                    <div class="arsenal-tab-bar" role="tablist" aria-label="Technical Skills Tabs">
+                        <button class="arsenal-tab-btn active" onclick="switchTab(event, 'tab-cloud')" role="tab" aria-selected="true" aria-controls="tab-cloud">Cloud Platforms</button>
+                        <button class="arsenal-tab-btn" onclick="switchTab(event, 'tab-k8s')" role="tab" aria-selected="false" aria-controls="tab-k8s">DevOps, K8s & IaC</button>
+                        <button class="arsenal-tab-btn" onclick="switchTab(event, 'tab-ai')" role="tab" aria-selected="false" aria-controls="tab-ai">AI, LLMs & Data</button>
+                        <button class="arsenal-tab-btn" onclick="switchTab(event, 'tab-observability')" role="tab" aria-selected="false" aria-controls="tab-observability">FinOps & Observability</button>
+                        <button class="arsenal-tab-btn" onclick="switchTab(event, 'tab-sec')" role="tab" aria-selected="false" aria-controls="tab-sec">Security & Governance</button>
+                    </div>
+
+                    <div class="arsenal-tab-content">
+                        <!-- Cloud Platforms Tab -->
+                        <div id="tab-cloud" class="tab-panel active" role="tabpanel">
+                            <div class="arsenal-subheading">> MULTI_CLOUD_&_HYBRID_INFRASTRUCTURE</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Google Cloud (GCP)</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Amazon Web Services (AWS)</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Microsoft Azure</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Oracle Cloud (OCI)</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Alibaba Cloud</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Tencent Cloud</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>CloudBlue</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Ingram Micro Platforms</span>
+                            </div>
+
+                            <div class="arsenal-subheading">> NATIVE_SERVICES_&_NETWORK_TOPOLOGY</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip">GCP Compute Engine</span>
+                                <span class="arsenal-skill-chip">AWS EC2 / Fargate</span>
+                                <span class="arsenal-skill-chip">Azure Virtual Machines</span>
+                                <span class="arsenal-skill-chip">Cloud Functions / AWS Lambda</span>
+                                <span class="arsenal-skill-chip">GCS / S3 / Azure Blob</span>
+                                <span class="arsenal-skill-chip">VPC Peering / Transit Gateway</span>
+                                <span class="arsenal-skill-chip">Cloud CDN / CloudFront</span>
+                                <span class="arsenal-skill-chip">IAM & KMS Key Vaults</span>
+                            </div>
+                        </div>
+
+                        <!-- DevOps, K8s & IaC Tab -->
+                        <div id="tab-k8s" class="tab-panel" role="tabpanel">
+                            <div class="arsenal-subheading">> CONTAINER_ORCHESTRATION_&_GITOPS</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Kubernetes (K8s)</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>GKE / EKS / AKS</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>ArgoCD (GitOps)</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>FluxCD</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Helm & Kustomize</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Istio Service Mesh</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Docker & containerd</span>
+                            </div>
+
+                            <div class="arsenal-subheading">> INFRASTRUCTURE_AS_CODE_&_PIPELINES</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip">Terraform & Terragrunt</span>
+                                <span class="arsenal-skill-chip">Pulumi & Crossplane</span>
+                                <span class="arsenal-skill-chip">Ansible Automation</span>
+                                <span class="arsenal-skill-chip">GitHub Actions & GitLab CI</span>
+                                <span class="arsenal-skill-chip">Jenkins Enterprise</span>
+                                <span class="arsenal-skill-chip">Packer Machine Images</span>
+                                <span class="arsenal-skill-chip">Argo Rollouts (Canary / Blue-Green)</span>
+                            </div>
+                        </div>
+
+                        <!-- AI, LLMs & Data Tab -->
+                        <div id="tab-ai" class="tab-panel" role="tabpanel">
+                            <div class="arsenal-subheading">> ARTIFICIAL_INTELLIGENCE_&_DEV_WORKFLOWS</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Google Vertex AI</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Claude Code & Cursor</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>RAG Architectures</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>LangChain & LlamaIndex</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Ollama & OpenCode</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>pgvector & Pinecone</span>
+                            </div>
+
+                            <div class="arsenal-subheading">> DATA_PLATFORMS_&_STREAMING</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip">GCP BigQuery</span>
+                                <span class="arsenal-skill-chip">Apache Kafka</span>
+                                <span class="arsenal-skill-chip">Apache Airflow</span>
+                                <span class="arsenal-skill-chip">PostgreSQL & MySQL</span>
+                                <span class="arsenal-skill-chip">MongoDB & Cosmos DB</span>
+                                <span class="arsenal-skill-chip">Redis Distributed Caching</span>
+                                <span class="arsenal-skill-chip">dbt (Data Build Tool)</span>
+                            </div>
+                        </div>
+
+                        <!-- FinOps & Observability Tab -->
+                        <div id="tab-observability" class="tab-panel" role="tabpanel">
+                            <div class="arsenal-subheading">> FINOPS_&_COST_GOVERNANCE</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>FOCUS 1.0 Specification</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>KEDA Automated Rightsizing</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>CloudHealth & Spot.io</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Apptio Cloudability</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>AWS Budgets & Cost Explorer</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>GCP Committed Use Discounts</span>
+                            </div>
+
+                            <div class="arsenal-subheading">> SRE_OBSERVABILITY_&_INCIDENT_MANAGEMENT</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip">OpenTelemetry Standard</span>
+                                <span class="arsenal-skill-chip">Prometheus & Grafana</span>
+                                <span class="arsenal-skill-chip">Datadog APM & Logs</span>
+                                <span class="arsenal-skill-chip">ELK Stack & Splunk</span>
+                                <span class="arsenal-skill-chip">PagerDuty Incident Routing</span>
+                                <span class="arsenal-skill-chip">Jaeger Distributed Tracing</span>
+                            </div>
+                        </div>
+
+                        <!-- Security & Governance Tab -->
+                        <div id="tab-sec" class="tab-panel" role="tabpanel">
+                            <div class="arsenal-subheading">> SECURITY_POSTURE_&_COMPLIANCE</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Zero-Trust Architecture</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>OPA / Rego Gatekeeper</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>HashiCorp Vault</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Trivy, Falco & Snyk</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>Cloudflare & AWS WAF</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>PCI-DSS, ISO 27001, GDPR</span>
+                                <span class="arsenal-skill-chip"><span class="skill-dot"></span>CIS Benchmarks Hardening</span>
+                            </div>
+
+                            <div class="arsenal-subheading">> SYSTEMS_&_SCRIPTING</div>
+                            <div class="arsenal-chips-grid">
+                                <span class="arsenal-skill-chip">Python</span>
+                                <span class="arsenal-skill-chip">Rust</span>
+                                <span class="arsenal-skill-chip">Bash</span>
+                                <span class="arsenal-skill-chip">PowerShell</span>
+                                <span class="arsenal-skill-chip">Go (Golang)</span>
+                                <span class="arsenal-skill-chip">Linux (RHEL / Ubuntu / Debian)</span>
+                                <span class="arsenal-skill-chip">Windows Server & Active Directory</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="arsenal" style="padding: 4rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">04.</span> Technical Arsenal</h2>
-            
-            <div class="tabs-container gs-reveal" style="background: var(--surface); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px);">
-                <div class="tabs-header" style="display: flex; overflow-x: auto; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.3);">
-                    <button class="tab-btn active" onclick="openTab(event, 'tab-cloud')">Cloud</button>
-                    <button class="tab-btn" onclick="openTab(event, 'tab-devops')">DevOps & IaC</button>
-                    <button class="tab-btn" onclick="openTab(event, 'tab-ai')">AI & Data</button>
-                    <button class="tab-btn" onclick="openTab(event, 'tab-security')">Observability & Sec</button>
-                    <button class="tab-btn" onclick="openTab(event, 'tab-other')">Core IT</button>
+        <!-- Executive Education & Honors -->
+        <section class="section" id="education" style="background: rgba(14, 17, 26, 0.4); border-top: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 06. CREDENTIALS</span>
+                    <h2 class="section-title">Education & Honors</h2>
+                    <p class="section-subtitle">
+                        Academic background combining computer engineering rigor with strategic business and operations finance.
+                    </p>
                 </div>
-                
-                <div class="tabs-content" style="padding: 3rem;">
-                    <!-- CLOUD TAB -->
-                    <div id="tab-cloud" class="tab-pane active" style="display: block;">
-                        <h3 style="color: var(--neon-blue); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> PUBLIC_&_HYBRID_CLOUD</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                            <span class="tech-tag">Google Cloud (GCP)</span> <span class="tech-tag">Amazon Web Services (AWS)</span>
-                            <span class="tech-tag">Microsoft Azure</span> <span class="tech-tag">Oracle Cloud (OCI)</span>
-                            <span class="tech-tag">Alibaba Cloud</span> <span class="tech-tag">Tencent Cloud</span>
-                            <span class="tech-tag">CloudBlue</span> <span class="tech-tag">Ingram Micro Cloud</span>
-                            <span class="tech-tag">Salesforce</span> <span class="tech-tag">Hybrid Cloud</span>
-                        </div>
 
-                        <h3 style="color: var(--neon-blue); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> CLOUD_NATIVE_SERVICES</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                            <span class="tech-tag">GCP Compute Engine</span> <span class="tech-tag">AWS EC2 / Fargate</span> <span class="tech-tag">Azure VMs</span>
-                            <span class="tech-tag">Cloud Functions / Lambda</span> <span class="tech-tag">Cloud Storage / S3 / Blob</span>
-                            <span class="tech-tag">VPC / Cloud DNS / Route 53</span> <span class="tech-tag">Cloud IAM / AWS IAM</span>
-                            <span class="tech-tag">Cloud CDN / Cloudfront</span> <span class="tech-tag">KMS / Azure Key Vault</span>
-                            <span class="tech-tag">GCP Anthos / Azure Arc</span> <span class="tech-tag">Transit Gateway</span>
+                <div class="bento-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                    <div class="bento-card">
+                        <div>
+                            <div class="bento-icon-box" style="color: var(--color-amber-400);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                            </div>
+                            <h3 class="bento-title">Industry Honors</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                                <div>
+                                    <div style="font-weight: 700; color: #fff;">🏆 Most Valuable Professional Engineer</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-muted);">Datacom Systems — Awarded for outstanding cloud automation engineering.</div>
+                                </div>
+                                <div>
+                                    <div style="font-weight: 700; color: #fff;">🏆 Accountability Award</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-muted);">Endurance International Group (HostGator).</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- DEVOPS TAB -->
-                    <div id="tab-devops" class="tab-pane" style="display: none;">
-                        <h3 style="color: var(--neon-green); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> ORCHESTRATION_&_CONTAINERS</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                            <span class="tech-tag">Kubernetes (K8s)</span> <span class="tech-tag">GKE / EKS / AKS</span>
-                            <span class="tech-tag">Docker / containerd / CRI-O</span> <span class="tech-tag">OpenShift</span>
-                            <span class="tech-tag">Helm / Kustomize</span> <span class="tech-tag">Istio / Linkerd (Service Mesh)</span>
-                        </div>
-
-                        <h3 style="color: var(--neon-green); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> INFRASTRUCTURE_AS_CODE_&_CI/CD</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                            <span class="tech-tag">Terraform / Terragrunt</span> <span class="tech-tag">Pulumi / Crossplane</span>
-                            <span class="tech-tag">Ansible / Puppet / Chef</span> <span class="tech-tag">ArgoCD / FluxCD (GitOps)</span>
-                            <span class="tech-tag">GitHub Actions / GitLab CI</span> <span class="tech-tag">Jenkins / Azure DevOps</span>
-                            <span class="tech-tag">Packer</span> <span class="tech-tag">Argo Rollouts</span>
-                        </div>
-                    </div>
-
-                    <!-- AI & DATA TAB -->
-                    <div id="tab-ai" class="tab-pane" style="display: none;">
-                        <h3 style="color: #ec4899; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> ARTIFICIAL_INTELLIGENCE_&_LLMS</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                            <span class="tech-tag">GitHub Copilot / Cursor / Cline</span> <span class="tech-tag">Vertex AI</span>
-                            <span class="tech-tag">OpenAI / ChatGPT</span> <span class="tech-tag">Anthropic Claude</span>
-                            <span class="tech-tag">Meta LLaMA / DeepSeek</span> <span class="tech-tag">LangChain / LlamaIndex</span>
-                            <span class="tech-tag">RAG Architectures</span> <span class="tech-tag">HuggingFace</span>
-                        </div>
-
-                        <h3 style="color: #ec4899; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> DATA_ENGINEERING_&_DATABASES</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                            <span class="tech-tag">PostgreSQL / MySQL</span> <span class="tech-tag">MongoDB / Cosmos DB / DynamoDB</span>
-                            <span class="tech-tag">Redis / ElasticSearch</span> <span class="tech-tag">pgvector / Pinecone (Vector DBs)</span>
-                            <span class="tech-tag">BigQuery / Redshift / Snowflake</span> <span class="tech-tag">Apache Kafka / Airflow</span>
-                            <span class="tech-tag">dbt (Data Build Tool)</span> <span class="tech-tag">ETL / DataOps</span>
-                        </div>
-                    </div>
-
-                    <!-- SECURITY TAB -->
-                    <div id="tab-security" class="tab-pane" style="display: none;">
-                        <h3 style="color: var(--neon-purple); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> OBSERVABILITY_&_FINOPS</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                            <span class="tech-tag">Prometheus / Grafana</span> <span class="tech-tag">Datadog / Dynatrace</span>
-                            <span class="tech-tag">OpenTelemetry / Jaeger</span> <span class="tech-tag">ELK Stack / Splunk / Loki</span>
-                            <span class="tech-tag">PagerDuty / VictorOps</span> <span class="tech-tag">CloudHealth / Spot.io / Apptio</span>
-                        </div>
-
-                        <h3 style="color: var(--neon-purple); font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> DEVSECOPS_&_SECURITY</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                            <span class="tech-tag">HashiCorp Vault</span> <span class="tech-tag">OPA / Gatekeeper</span>
-                            <span class="tech-tag">SonarQube / VeraCode</span> <span class="tech-tag">Falco / Trivy / Snyk</span>
-                            <span class="tech-tag">AWS WAF / Cloudflare WAF</span> <span class="tech-tag">ModSecurity</span>
-                            <span class="tech-tag">PCI-DSS / ISO 27001 / GDPR</span> <span class="tech-tag">Zero-Trust Architectures</span>
-                        </div>
-                    </div>
-
-                    <!-- OTHER TAB -->
-                    <div id="tab-other" class="tab-pane" style="display: none;">
-                        <h3 style="color: #64748b; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> SCRIPTING_&_APIS</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                            <span class="tech-tag">Python / Bash / PowerShell</span> <span class="tech-tag">Go (Golang)</span>
-                            <span class="tech-tag">RESTful / gRPC / GraphQL</span> <span class="tech-tag">Kong API / Apigee</span>
-                            <span class="tech-tag">Swagger / OpenAPI</span> <span class="tech-tag">OAuth 2.0 / JWT</span>
-                        </div>
-
-                        <h3 style="color: #64748b; font-family: 'Fira Code', monospace; font-size: 1rem; margin-bottom: 1.5rem;">> OS_&_SYSTEMS</h3>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                            <span class="tech-tag">Linux (Ubuntu, RHEL, CentOS)</span> <span class="tech-tag">Windows Server</span>
-                            <span class="tech-tag">VMware / ESXi / Hyper-V</span> <span class="tech-tag">Nginx / Apache / IIS</span>
-                            <span class="tech-tag">ITIL / ITSM / ServiceNow</span> <span class="tech-tag">Agile / Scrum / Six Sigma</span>
+                    <div class="bento-card">
+                        <div>
+                            <div class="bento-icon-box" style="color: var(--color-cyan-400);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <h3 class="bento-title">Academic Degrees</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                                <div>
+                                    <div style="font-weight: 700; color: #fff;">🎓 MBA (Operations & Finance)</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-muted);">Biju Patnaik University of Technology (2025)</div>
+                                </div>
+                                <div>
+                                    <div style="font-weight: 700; color: #fff;">🎓 B.Tech (Electronics & Telecom)</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-muted);">Biju Patnaik University of Technology (2010)</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="education" style="padding: 4rem 0 8rem 0;">
-            <h2 class="section-title gs-reveal"><span class="highlight">05.</span> Education & Honors</h2>
-            
-            <div class="projects-grid">
-                <!-- Honors -->
-                <div class="project-card gs-reveal" style="border-top: 3px solid #eab308;">
-                    <span class="project-type" style="color: #eab308;">AWARDS</span>
-                    <h3 style="font-size: 1.4rem;">Industry Recognition</h3>
-                    <ul style="color: var(--text-muted); list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;">🏆 <strong>Most Valuable Professional Engineer</strong> <br> Awarded by Datacom Systems for outstanding automation engineering.</li>
-                        <li>🏆 <strong>Accountability Award</strong> <br> Awarded by Endurance International Group (HostGator).</li>
-                    </ul>
-                </div>
+        <!-- Executive CTA / Contact Section -->
+        <section class="section" id="contact" style="border-top: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="cta-banner">
+                    <h2 class="cta-title">Let's Architect at Scale.</h2>
+                    <p class="cta-subtitle">
+                        Whether you are migrating mission-critical workloads, cutting millions in runaway cloud spend, 
+                        or establishing a multi-cloud SRE practice — let's connect.
+                    </p>
 
-                <!-- Education -->
-                <div class="project-card gs-reveal" style="border-top: 3px solid var(--neon-blue);">
-                    <span class="project-type">ACADEMIC BACKGROUND</span>
-                    <h3 style="font-size: 1.4rem;">Education</h3>
-                    <ul style="color: var(--text-muted); list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;">🎓 <strong>MBA (Operations & Finance)</strong> <br> Biju Patnaik University of Technology (2025)</li>
-                        <li>🎓 <strong>B.Tech (Electronics & Telecom)</strong> <br> Biju Patnaik University of Technology (2010)</li>
-                    </ul>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-lg" onclick="copyContactEmail()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>Copy Email Address</span>
+                        </button>
+                        <a href="https://github.com/priyaranjan-sahu" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 4.9 3.17 9.06 7.57 10.53.55.1.75-.24.75-.54v-1.9c-3.08.67-3.73-1.48-3.73-1.48-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.68.08-.68 1.11.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.7-1.49-2.46-.28-5.05-1.23-5.05-5.5 0-1.21.43-2.2 1.14-2.98-.11-.28-.5-1.41.11-2.94 0 0 .93-.3 3.05 1.14a10.5 10.5 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.22 2.66.11 2.94.71.78 1.14 1.77 1.14 2.98 0 4.28-2.6 5.22-5.07 5.49.4.35.76 1.03.76 2.09v3.1c0 .3.2.65.76.54a11.12 11.12 0 0 0 7.56-10.53C23.1 5.34 18.27.5 12 .5Z"/></svg>
+                            <span>Explore GitHub Profile</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>Designed and built by Priya Ranjan Sahu. Systems online.</p>
-            <p style="margin-top: 1rem; opacity: 0.5;">EOF</p>
+            <div class="footer-content">
+                <div class="footer-legal">
+                    Designed and built with modern Design Token Foundations. &copy; 2026 Priya Ranjan Sahu.
+                </div>
+                <div class="footer-badge">
+                    <span class="status-dot" style="width: 6px; height: 6px;"></span>
+                    <span>All Cloud Services Operational 99.99%</span>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Interactive Toast -->
+    <div class="toast" id="toast-notification" role="status" aria-live="polite">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <span id="toast-message">Email address copied to clipboard!</span>
+    </div>
+
+    <!-- Self-Contained Performance JavaScript -->
     <script>
-        // --- Tab Logic ---
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-pane");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+        // --- 1. Mobile Menu Drawer Navigation ---
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            const isOpen = drawer.classList.contains('open');
+            if (isOpen) {
+                closeDrawer();
+            } else {
+                drawer.classList.add('open');
+                overlay.classList.add('open');
+                menuBtn.classList.add('active');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
             }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
         }
 
-        // --- 1. GSAP Scroll Animations ---
-        gsap.registerPlugin(ScrollTrigger);
-        
-        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
-            gsap.fromTo(elem, 
-                { y: 50, opacity: 0 },
-                {
-                    y: 0, 
-                    opacity: 1,
-                    duration: 1, 
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 85%", // Trigger when top of element hits 85% of viewport
-                    }
-                }
-            );
+        function closeDrawer() {
+            drawer.classList.remove('open');
+            overlay.classList.remove('open');
+            menuBtn.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', closeDrawer);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && drawer.classList.contains('open')) {
+                closeDrawer();
+            }
         });
 
-        // --- 2. Interactive Canvas Data Network ---
-        const canvas = document.getElementById('network-canvas');
-        const ctx = canvas.getContext('2d');
-        let width, height, particles;
+        // --- 2. Header Scroll Effect ---
+        const siteHeader = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                siteHeader.classList.add('scrolled');
+            } else {
+                siteHeader.classList.remove('scrolled');
+            }
+        }, { passive: true });
 
-        function initCanvas() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            particles = [];
-            for (let i = 0; i < 80; i++) {
-                particles.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    radius: Math.random() * 2 + 1
-                });
+        // --- 3. Projects Category Filter ---
+        function filterProjects(category, btn) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // --- 4. Technical Arsenal Tabs ---
+        function switchTab(evt, tabId) {
+            const tabBtns = document.querySelectorAll('.arsenal-tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+
+            tabBtns.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            tabPanels.forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            evt.currentTarget.classList.add('active');
+            evt.currentTarget.setAttribute('aria-selected', 'true');
+            const targetPanel = document.getElementById(tabId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
             }
         }
 
-        let mouse = { x: null, y: null };
-        window.addEventListener('mousemove', e => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        });
-        window.addEventListener('resize', initCanvas);
-
-        function drawNetwork() {
-            ctx.clearRect(0, 0, width, height);
-            ctx.fillStyle = '#00f0ff';
-            ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)';
-            ctx.lineWidth = 1;
-
-            for (let i = 0; i < particles.length; i++) {
-                let p = particles[i];
-                p.x += p.vx;
-                p.y += p.vy;
-
-                // Bounce off edges
-                if (p.x < 0 || p.x > width) p.vx *= -1;
-                if (p.y < 0 || p.y > height) p.vy *= -1;
-
-                // Draw Particle
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fill();
-
-                // Mouse Interaction
-                if (mouse.x != null) {
-                    let dx = mouse.x - p.x;
-                    let dy = mouse.y - p.y;
-                    let dist = Math.sqrt(dx*dx + dy*dy);
-                    if (dist < 150) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(0, 255, 65, ${1 - dist/150})`;
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(mouse.x, mouse.y);
-                        ctx.stroke();
-                        ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)'; // Reset
-                    }
-                }
-
-                // Connect Particles
-                for (let j = i + 1; j < particles.length; j++) {
-                    let p2 = particles[j];
-                    let dx = p.x - p2.x;
-                    let dy = p.y - p2.y;
-                    let dist = Math.sqrt(dx*dx + dy*dy);
-                    
-                    if (dist < 100) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(drawNetwork);
+        // --- 5. Copy Email Toast ---
+        function copyContactEmail() {
+            const email = "priyaranjan.sahu@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                showToast("Email copied: " + email);
+            }).catch(() => {
+                window.location.href = "mailto:" + email;
+            });
         }
 
-        initCanvas();
-        drawNetwork();
+        function showToast(msg) {
+            const toast = document.getElementById('toast-notification');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // --- 6. Energy-Efficient Ambient Particle Network ---
+        (function initParticles() {
+            // Check reduced motion preference or very small screens
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 640) {
+                return;
+            }
+
+            const canvas = document.getElementById('particle-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height, particles;
+            let animationFrameId;
+            let isRunning = true;
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+                particles = [];
+                const count = Math.min(Math.floor(width / 28), 45); // Responsive count: low CPU
+                for (let i = 0; i < count; i++) {
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.35,
+                        vy: (Math.random() - 0.5) * 0.35,
+                        radius: Math.random() * 1.5 + 1
+                    });
+                }
+            }
+
+            let mouse = { x: null, y: null };
+            window.addEventListener('mousemove', e => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            }, { passive: true });
+
+            window.addEventListener('mouseleave', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            window.addEventListener('resize', resize);
+            resize();
+
+            function draw() {
+                if (!isRunning) return;
+                ctx.clearRect(0, 0, width, height);
+
+                ctx.fillStyle = 'rgba(6, 182, 212, 0.6)';
+                ctx.strokeStyle = 'rgba(6, 182, 212, 0.08)';
+                ctx.lineWidth = 1;
+
+                const len = particles.length;
+                for (let i = 0; i < len; i++) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0 || p.x > width) p.vx *= -1;
+                    if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Mouse proximity interaction
+                    if (mouse.x !== null) {
+                        const dx = mouse.x - p.x;
+                        const dy = mouse.y - p.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 120) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(56, 189, 248, ${0.4 * (1 - dist / 120)})`;
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(mouse.x, mouse.y);
+                            ctx.stroke();
+                        }
+                    }
+
+                    // Inter-particle links
+                    for (let j = i + 1; j < len; j++) {
+                        const p2 = particles[j];
+                        const dx = p.x - p2.x;
+                        const dy = p.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 90) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(6, 182, 212, ${0.12 * (1 - dist / 90)})`;
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                animationFrameId = requestAnimationFrame(draw);
+            }
+
+            // Pause animation when page is hidden/tab switched (battery saver)
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    isRunning = false;
+                    cancelAnimationFrame(animationFrameId);
+                } else {
+                    isRunning = true;
+                    draw();
+                }
+            });
+
+            draw();
+        })();
+
+        // --- 7. Active Nav Link on Scroll (IntersectionObserver) ---
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${currentId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => sectionObserver.observe(section));
     </script>
 </body>
 </html>
